@@ -1,0 +1,1820 @@
+<!doctype html>
+<html>
+<head>
+<title>Introducing HTML/CSS - ReDI</title>
+<link rel="stylesheet" href="lesson.css">
+<link rel="stylesheet" href="default.min.css">
+<script src="lesson.js"></script>
+<script src="highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<section class="first">
+  <h1>Introducing HTML/CSS <strong>ReDI School of Digital Integration</strong></h1>
+</section>
+<section>
+  <img src="img/web-developer-roadmap.png">
+</section>
+<section>
+  <h1>Websites...</h1>
+  <p>On this introductory course at ReDI, we'll learn how to do a website.</p>
+  <p>With <strong>HTML</strong> we will create the structure for each page (a website can have many webpages or "pages") and also add the content.</p>
+  <p>With <strong>CSS</strong> we will define how that page will look like.</p>
+</section>
+<section>
+  <h1>Websites...</h1>
+  <div class="typeofwebsites">
+    <h4>Personal websites</h4>
+    <img src="img/sites/personal.jpg" alt=""> </div>
+  <div class="typeofwebsites">
+    <h4>Photo websites</h4>
+    <img src="img/sites/photos.jpg" alt=""> </div>
+  <div class="typeofwebsites">
+    <h4>Blogs</h4>
+    <img src="img/sites/blog.jpg" alt=""> </div>
+  <div class="typeofwebsites">
+    <h4>Social Media websites</h4>
+    <img src="img/sites/socialmedia.jpg" alt=""> </div>
+  <div class="typeofwebsites">
+    <h4>E-commerce websites</h4>
+    <img src="img/sites/ecommerce.jpg" alt=""> </div>
+  <div class="typeofwebsites">
+    <p>News websites<br>
+      Businesses websites<br>
+      Entertainment websites<br>
+      and many, many others.</p>
+  </div>
+</section>
+
+<section>
+  <h1>Ah, the rules...</h1>
+  <h2>Yes, we have some class rules that we all should respect</h2>
+</section>
+<section>
+  <h1>Ah, the rules...</h1>
+  <h2>Rule 1</h2>
+  <p>No phones (or Facebook, Skype, chat, etc) during class.</p>
+  <p>If you break the rule, you will have to sing for us. And yes, we will choose the song.</p>
+</section>
+<section>
+  <h1>Ah, the rules...</h1>
+  <h2>Rule 2</h2>
+  <p>Be punctual. The classes will start at 19:00hs, not after. </p>
+  <p>Arrive some minutes before, get coffee, say hi and be ready to start at 19:00</p>
+</section>
+<section>
+  <h1>Introducing HTML/CSS</h1>
+  <h2>HTML Basics</h2>
+</section>
+<section>
+  <h1>What is HTML?</h1>
+  <div class="pull-right" style="margin-top:1em;"> <img src="img/640px-Sir_Tim_Berners-Lee.jpg"> <br>
+    <small> Image Attribution: Paul Clarke (http://paulclarke.com/photography/) </small> </div>
+  <ul>
+    <li><strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage: HTML is a language for writing documents</li>
+    <li><strong>Hypertext: </strong>Documents link to each other</li>
+    <li><strong>Markup: </strong>Describes the semantic role of parts of a document</li>
+  </ul>
+  <p>It was created by Tim Berners-Lee in 1990 to help scientists at CERN share documents </p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Semantic Markup</h1>
+  <h3>Semantic role = purpose</h3>
+  <p>A document has different parts such as title, sections and images</p>
+  <p><strong>Exercise: </strong>identify parts of a print document</p>
+</section>
+<!-- slide-->
+<section>
+  <h1>HTML structure</h1>
+  <p>An HTML document is made of text and 'markup' tags which are used to define the structure, appearance and function of the information.</p>
+  <p>An HTML document is divided into two main section : Heading and Body</p>
+</section>
+<!-- slide-->
+<section>
+  <h1>HTML structure</h1>
+  <ul>
+    <li>Heading - it contains informations about the document such as title, scripts, styles, meta information, and more<br>
+      <strong>&lt;head&gt;&lt;/head&gt;</strong></li>
+    <li>Body -  it contains everything you see on the web: text, images, graphic and other elements.<br>
+      <strong>&lt;body&gt;&lt;/body&gt;</strong></li>
+  </ul>
+</section>
+<!-- slide-->
+<section>
+  <h1>Example of an HTML Doc</h1>
+  <pre><code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Title of the document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        The content of the document...
+    &lt;/body&gt;
+&lt;/html&gt;
+  </code></pre>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>HTML elements</h1>
+  <pre><code class="html">
+    &lt;p&gt;This is paragraph content.&lt;/p&gt;
+    &lt;h1&gt;This is heading content.&lt;/h1&gt;
+    &lt;h2&gt;This is heading content.&lt;/h2&gt;
+    &lt;div&gt;This is division content.&lt;/div&gt;
+    &lt;br&gt; 
+    &lt;strong&gt;Display text stronger&lt;/strong&gt;
+    &lt;img src="path/to/image.jpg"/&gt;
+    &lt;hr&gt;
+    &lt;ul&gt;Unordered Lists &lt;/ul&gt; or &lt;ol&gt;Ordered list &lt;/ol&gt;
+    &lt;li&gt; list items&lt;/li&gt;
+    &lt;table&gt;&lt;/table&gt;
+    &lt;tr&gt;&lt;/tr&gt;
+    &lt;th&gt;&lt;/th&gt;
+    &lt;td&gt;&lt;/td&gt;
+  </code></pre>
+</section>
+<!--
+<section>
+  <h1>Ain't nothin like an install party...</h1>
+  <p> You will need (already installed): </p>
+  <ul>
+    <li>Google Chrome</li>
+    <li>Atom Code Editor</li>
+  </ul>
+</section>
+-->
+<!-- slide-->
+
+<section>
+  <h1>Code comments</h1>
+  <p>Help yourself and future team mates by commenting your code!</p>
+  <h2>What are comments?</h2>
+  <p>
+  <ul>
+    <li>Text within the code, that isn't displayed to the visitor</li>
+    <li>Write in human understandable speech, not as code</li>
+    <li>Help to remember coding decisions</li>
+    <li>Help to structure the code better</li>
+  </ul>
+</section>
+<section>
+  <h1>Code comments</h1>
+  <p>Example</p>
+  <pre><code class="html">
+&lt;!-- list of ingredients, every list
+            item is an ingredient of the recipe --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Oil&lt;/li&gt;
+  &lt;li&gt;Salt&lt;/li&gt;
+  &lt;!-- salt could be removed,
+                as it is not mandatory for scrambled eggs --&gt;
+&lt;/ul&gt;
+  </code></pre>
+</section>
+<section>
+  <h1>Let's Start Coding!</h1>
+  <p>Open Atom  and Google Chrome<br>
+    Create an HTML document and add </p>
+  <ul>
+    <li>Title</li>
+    <li>Paragraph</li>
+    <li>Heading</li>
+    <li>List</li>
+    <li>Image </li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Normal HTML elements</h1>
+  <p>Normal tags have start and end, content in the middle:</p>
+  <pre><code class="html">&lt;p&gt;bla bla&lt;/p&gt;</code></pre>
+  <p>Can be nested:</p>
+  <pre><code class="html">&lt;p&gt;bla bla &lt;strong&gt;bla&lt;/strong&gt; bla&lt;/p&gt;</code></pre>
+  <p>But never interleaved!</p>
+  <pre><code class="html">WRONG: &lt;p&gt;&lt;strong&gt;&lt;/p&gt;&lt;/strong&gt;</code></pre>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Empty HTML elements</h1>
+  <p>Some elements have no content, so no closing tag:</p>
+  <pre><code class="html">&lt;br&gt;
+&lt;img&gt;
+&lt;hr&gt;
+&lt;input&gt;</code></pre>
+  <p>Can occur within the content of normal elements:</p>
+  <pre><code class="html">&lt;p&gt; ... &lt;br&gt; ... &lt;/p&gt;</code></pre>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Element attributes</h1>
+  <p>Elements can have attributes. Inside (start) tag:</p>
+  <pre><code class="html">&lt;img src=&quot;images/test.jpg&quot;&gt;</code></pre>
+  <pre><code class="html">&lt;p class=&quot;test&quot;&gt; ... &lt;/p&gt;</code></pre>
+  <p>Multiple attributes:</p>
+  <pre><code class="html">&lt;img src=&quot;images/test.jpg&quot; alt="An image" class="test"&gt;</code></pre>
+</section>
+<section>
+  <h1>Project structure</h1>
+  <img src="img/my-project.png" style="float: right; margin: 2rem;" width=300>
+  <p>It's easier if you follow a structure</p>
+  <p>Create a folder for the project, e.g. <code>my-project</code></p>
+  <p>Name the start page <code>index.html</code></p>
+  <p>Add other pages named e.g. <code>other-page.html</code></p>
+</section>
+<section>
+  <h1>Exercise</h1>
+  <p>I have a recipe to cook scrambled eggs</p>
+  <p>But I only have the text yet</p>
+  <p>Help me to add the correct html tags</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Exercise</h1>
+  <p>Add all the tags around this text that was rendered from HTML:</p>
+  <h2>Scrambled eggs</h2>
+  <p>For 2 persons</p>
+  <h3>Ingredients</h3>
+  <ul>
+    <li>2 Eggs</li>
+    <li>Salt</li>
+    <li>Oil</li>
+  </ul>
+  <h3>Instructions</h3>
+  <ol>
+    <li>Heat the pan, add oil, then add the eggs.</li>
+    <li>Add salt</li>
+    <li>Scramble the eggs</li>
+    <li>When the eggs are ready to eat, serve them.</li>
+  </ol>
+</section>
+<section>
+<h1>Solution</h1>
+  <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Scrambled eggs&lt;/h1&gt;
+    &lt;p&gt;For 2 persons&lt;/p&gt;
+    &lt;h2&gt;Ingredients&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;2 Eggs&lt;/li&gt;
+      &lt;li&gt;Salt&lt;/li&gt;
+      &lt;li&gt;Oil&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Instructions&lt;/h2&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Heat the pan, add oil, then add the eggs&lt;/li&gt;
+      &lt;li&gt;Add salt&lt;/li&gt;
+      &lt;li&gt;Scramble the eggs&lt;/li&gt;
+      &lt;li&gt;When the eggs are ready to eat, serve them&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Embed image</h1>
+  <p>Exercise</p>
+  <ul>
+    <li>Create folder called <strong>images</strong></li>
+    <li>Download an image into it</li>
+    <li>Embed image in web page</li>
+  </ul>
+  <p>This is the basic HTML you need to embed an image:
+  <pre><code class="html">&lt;img src="images/image.jpg" alt="image description"&gt;</code></pre>
+  </p>
+  <p>You can add more control with WIDTH and HEIGHT
+  <pre><code class="html">&lt;img src="images/image.jpg" alt="image description" width="300" height="200"&gt;</code></pre>
+  </p>
+</section>
+<section>
+  <h1>Link</h1>
+  <p>To link to another page, add an<code>a</code>tag, with an<code>href</code>attribute</p>
+  <pre><code class="html">&lt;a href="other-page.html"&gt;Other page&lt;/a&gt;</code></pre>
+  <p>In your project: add a new file, and link to it from<code>index.html</code></p>
+</section>
+<section>
+  <h1>URLs</h1>
+  <p>A full URL has a protocol, domain, and path</p>
+  <p>http://mysite.com/some-page-over-there.html</p>
+  <p>Here the protocol is<code>http</code>, domain is<code>mysite.com</code>, path is<code>/some-page-over-there.html</code></p>
+  <p>What other protocols do you know?</p>
+  <p>In your project: link to an external domain from one of your pages</p>
+</section>
+<section>
+  <h1>More structure with relative URLs</h1>
+  <img src="img/my-project-with-image.png" style="float: right; margin: 2rem;" width=300>
+  <p>If a URL is not complete, the browser uses the current context</p>
+  <p>The image reference in the<code>img</code>tag is a URL as well</p>
+  <p>&lt;img src="images/some-image.jpg"&gt;</p>
+  <p>In your project: add a folder<code>images</code>, move picture into it, change<code>img</code></p>
+</section>
+<section>
+  <h1>Image as Link</h1>
+  <p>So far we have made text links.</p>
+  <p>How can we make an image into a link?</p>
+  <p>Remember, what was inside the<code>a</code>tag when making a text link?</p>
+</section>
+<section>
+  <h1>Image as Link - Solution</h1>
+  <p><a href="https://www.google.com">This is a text link</a></p>
+  <h4>Code:</h4>
+  <pre><code class="html">&lt;a href="https://www.google.com"&gt;This is a text link&lt;/a&gt;</code></pre>
+  <p>This is an image as a link:<a href="https://www.google.com"><img src="img/grafzahl2.jpg" width="200"></a></p>
+  <p>Code:
+  <pre><code class="html">&lt;a href="https://www.google.com"&gt;&lt;img src="img/grafzahl2.jpg"&gt;&lt;/a&gt;</code></pre>
+  </p>
+</section>
+<!--
+    <section>
+      <h1>Photo</h1>
+      <img class="pull-right" src="img/selfie.jpg">
+      <p>Make a picture with your smartphone</p>
+      <p>Download the image</p>
+      <p>Embed it on your web page</p>
+      <p>Resize it if it is too large</p>
+    </section>
+-->
+
+<section>
+  <h1>Tables</h1>
+  <p>The table element represents data with more than one dimension, in the form of a table.</p>
+  <p>For example...</p>
+  <table style="width: 50%;" border="1">
+    <tr>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Matches Played</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Dortmund</td>
+      <td>6</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Hoffenheim</td>
+      <td>6</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Bayern München</td>
+      <td>6</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hannover 96</td>
+      <td>6</td>
+      <td>12</td>
+    </tr>
+  </table>
+</section>
+<section>
+  <h1>HTML tables - simple</h1>
+  <table style="width: 50%;" border="1">
+    <tr>
+      <th>Position</th>
+      <th>Team</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Dortmund</td>
+    </tr>
+  </table>
+  <p>
+  <pre><code class="html">&lt;table style="width: 50%;" border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Position&lt;/th&gt;
+    &lt;th&gt;Team&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;Dortmund&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  </p>
+  <p>Wrap everything in<code>table</code>, table rows in<code>tr</code>, table headers in<code>th</code>, table cells in<code>td</code></p>
+</section>
+<section>
+  <h1>HTML tables / more structure</h1>
+  <table style="width: 50%;">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Dortmund</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Hoffenheim</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+  <pre><code class="html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Position&lt;/th&gt;
+      &lt;th&gt;Team&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Dortmund&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Hoffenheim&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+  </p>
+  <p>Add<code>thead</code>and<code>tbody</code></p>
+  <p>The &lt;thead&gt; tag is used to group header content in an HTML table. It is used in conjunction with the &lt;tbody&gt; and &lt;tfoot&gt; elements to specify each part of a table (header, body, footer).</p>
+ <p>Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page.</p>
+</section>
+<section>
+  <h1>HTML 5 Elements for more structure</h1>
+  <pre><code class="html">&lt;main&gt;...&lt;/main&gt;</code></pre>
+  <p>Defines main part of a document</p>
+    <pre><code class="html">&lt;aside&gt;...&lt;/aside&gt;</code></pre>
+    <p>Defines content aside from the main content (like a sidebar)</p>
+    <pre><code class="html">&lt;header&gt;...&lt;/header&gt;</code></pre>
+    <p>Defines a header for a document or a section (different than head!)</p>
+    <pre><code class="html">&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+    <p>Defines a footer for a document or a section</p>
+</section>
+<section>
+  <h1>HTML 5 Elements</h1>
+  <p>There are many more</p>
+  <p>Useful to add meaningful structure to your page</p>
+  <p>Better than &lt;div&gt;...&lt;/div&gt; everywhere</p>
+  <ul>
+    <li>header</li>
+    <li>nav</li>
+    <li>footer</li>
+    <li>section</li>
+    <li>aside</li>
+    <li>article</li>
+    <li>time</li>
+    <li>...</li>
+  </ul>
+  <p>More e.g. here <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></p>
+</section>
+<section>
+  <h1>Task</h1>
+  <p>1. Create a new page and copy the following code from pastebin.com/raw/Cqp3qyAU<br>
+    2. Add the tags <strong>main</strong>, <strong>header</strong>, <strong>footer</strong>, <strong>aside</strong> and <strong>nav</strong> to structure the code reasonably<br>
+    3. Save as a new page</p>
+  <pre><code class="html">&lt;h1&gt;Best Recipes Website&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="index.html"&gt;Homepage&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Scrambled eggs&lt;/h2&gt;
+&lt;p&gt;For 2 persons&lt;/p&gt;
+&lt;h3&gt;Instructions&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Heat the pan, add oil and the eggs&lt;/li&gt;
+  &lt;li&gt;Scramble the eggs&lt;/li&gt;
+  &lt;li&gt;Serve&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;More Recipes&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Boiled Egg&lt;/li&gt;
+  &lt;li&gt;Blue milk&lt;/li&gt;
+  &lt;li&gt;Spaetzle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Copyright 2017 by Your Name&lt;/p&gt;</code></pre>
+</section>
+<section>
+  <h1>One possible solution</h1>
+  <pre><code class="html" style="font-size: 1.3rem;">&lt;header&gt;
+  &lt;h1&gt;Best Recipes Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="index.html"&gt;Homepage&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="about.html"&gt;About us&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;h2&gt;Scrambled eggs&lt;/h2&gt;
+  &lt;p&gt;For 2 persons&lt;/p&gt;
+  &lt;h3&gt;Instructions&lt;/h3&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Heat the pan, add oil and the eggs&lt;/li&gt;
+    &lt;li&gt;Scramble the eggs&lt;/li&gt;
+    &lt;li&gt;Serve&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/main&gt;
+&lt;aside&gt;
+  &lt;h4&gt;More Recipes&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Boiled Egg&lt;/li&gt;
+    &lt;li&gt;Blue milk&lt;/li&gt;
+    &lt;li&gt;Spaetzle&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;footer&gt;
+  &lt;p&gt;Copyright 2017 by Your Name&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+</section>
+
+<section>
+  <h1>Project for the course</h1>
+  <h2> We want to help you build your own website</h2>
+  <p>All the websites will have similar pages like "About", "Blog/news" and "Contact", but you can choose if you want to show what you do (portfolio-type) or sell products (ecommerce-type).</p>
+  <p><strong>Portfolio examples: </strong>photos you take, music you like, etc<br>
+    <strong>Ecommerce examples:</strong> food, clothes, furniture, software... anything you can sell.</p>
+  <p>Which project do you want to work on during this course?</p>
+</section>
+<!--
+    <section>
+        <h1>Task</h1>
+        <p>Write one comment in one of your pages,<br>
+             explaining a code decision<br>
+            in plain english using</p>
+        <xmp>
+        </xmp>
+    </section>-->
+
+<section>
+  <h1>Introducing HTML/CSS</h1>
+  <h2>CSS Basics</h2>
+  <h3>Lesson Goals</h3>
+  <ul>
+    <li>Learn the basics of using CSS to create styles and layouts</li>
+    <li>Review HTML and integrate it with CSS</li>
+  </ul>
+</section>
+<section>
+  <h1>What is CSS?</h1>
+  <ul>
+    <li>Cascading Style Sheets</li>
+    <li>Describes how HTML elements are to be displayed on different screens and in print</li>
+    <li>HTML documents have a tree-structure. CSS makes good use of it through inheritance</li>
+    <li>HTML elements inherit stylistic properties through CSS</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Why CSS?</h1>
+  <ul>
+    <li>Inline styles are hard to maintain and update</li>
+    <li>Separate presentation from content</li>
+    <li>Quickly update styles for the whole document</li>
+    <li>Swap between different styles, e.g. for accessibility, to update a design or to personalize the website for a visitor</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>CSS Syntax</h1>
+  <xmp>selector {
+    property: value;
+    }</xmp>
+  <p>Properties are things like <strong>background</strong>, <strong>color</strong>, <strong>width</strong> and <strong>height</strong>.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Class Selectors</h1>
+  <p>Class selectors allow us to assign a class on the page and add style properties to it.<br>
+    <br>
+    We can set a class to have red text:
+    <xmp>.red {
+      color: red;
+      }</xmp>
+  <p>The dot notation (<strong>.red</strong>) defines a class</p>
+</section>
+<section>
+  <h1>How to use a class</h1>
+  <p>Every element, that has the class assigned, inherits the class' properties.</p>
+  <xmp><a href="about.html" class="red">A red link</a></xmp>
+  <p><strong>Attention</strong>: the class is written without a dot in HTML</p>
+</section>
+<section>
+<h1>Where to type CSS?</h1>
+<h2>Task</h2>
+<p>1. Add the following line to the &lt;head&gt; of one of your pages</p>
+<xmp>
+  <head>
+  <link rel="stylesheet" href="stylesheet.css">
+  </head>
+</xmp>
+<p>2. Create a new file called <strong>stylesheet.css</strong></p>
+<p>3. Add the following CSS to the stylesheet.css:</p>
+<xmp>.red {
+  color: red;
+  }</xmp>
+<p>4. Add a red link to one of your pages, using the css class .red</p>
+</section>
+<section>
+  <h1>Solution</h1>
+  <p><img src="img/red-class.png"></p>
+</section>
+<section>
+<h1>Find the mistakes 1</h1>
+<xmp>
+  <html>
+  <head>
+  <title>Title of the Page</title>
+  <body>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 1</h1>
+<xmp>
+  <html>
+  <head>
+  <title>Title of the Page</title>
+  </head>
+  <!-- Head needs to be closed -->
+  <body>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 2</h1>
+<xmp>
+  <html>
+  <body>
+  <table>
+    <thead>
+    <th>Ingredient</th>
+      <th>Amount</th>
+        </thead>
+    <tbody>
+    <td>Salt</td>
+      <td>a little bit</td>
+      <td>Oil</td>
+      <td>1 tablespoon</td>
+        </tbody>
+  </table>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 2</h1>
+<xmp>
+  <html>
+  <body>
+  <table>
+    <thead>
+      <tr><!-- tr was missing -->
+        <th>Ingredient</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><!-- tr was missing -->
+        <td>Salt</td>
+        <td>a little bit</td>
+      </tr>
+      <tr><!-- tr was missing -->
+        <td>Oil</td>
+        <td>1 tablespoon</td>
+      </tr>
+    </tbody>
+  </table>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 3</h1>
+<xmp>
+  <html>
+  <body>
+  <header>
+    <h1>Name of the Website</h1>
+  </header>
+  <main> A text about a recipe </main>
+  <header> Imprint </header>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 3</h1>
+<xmp>
+  <html>
+  <body>
+  <header>
+    <h1>Name of the Website</h1>
+  </header>
+  <main> A text about a recipe </main>
+  <footer><!-- the bottom of the page is the footer -->
+    Imprint </footer>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 4</h1>
+<xmp>
+  <html>
+  <body>
+  <header>
+    <h1>Name of the Website</h1>
+  </header>
+  <main> A text about a recipe </main>
+  <main> A text about another recipe </main>
+  <footer> Imprint </footer>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 4</h1>
+<xmp>
+  <html>
+  <body>
+  <header>
+    <h1>Name of the Website</h1>
+  </header>
+  <main><!-- there may only be one main element per page -->
+    <section> A text about a recipe </section>
+    <section> A text about another recipe </section>
+  </main>
+  <footer> Imprint </footer>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 5</h1>
+<xmp>
+  <html>
+  <body>
+  <header>
+    <nav> <a href="index.html">Link to the Homepage</a> </nav>
+  </header>
+  <body>
+  A text about a recipe here.
+  </body>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 5</h1>
+<xmp>
+  <html>
+  <body>
+  <header>
+    <nav> <a href="index.html">Link to the Homepage</a> </nav>
+  </header>
+  <main><!-- there is only one body per page -->
+    A text about a recipe here. </main>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 6</h1>
+<xmp>
+  <html>
+  <header>
+    <title>Some page title</title>
+  </header>
+  <body>
+  <p> Some text about the page here </p>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 6</h1>
+<xmp>
+  <html>
+  <head>
+  <!-- Do not confuse head with header -->
+  <title>Some page title</title>
+  </head>
+  <body>
+  <p> Some text about the page here </p>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 7</h1>
+<xmp>
+  <html>
+  <head>
+  <title>Some page title</title>
+  </head>
+  <body>
+  <p> Some text about the page here </p>
+  <-- A comment, that the visitor cannot see in the browser -->
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 7</h1>
+<xmp>
+  <html>
+  <head>
+  <title>Some page title</title>
+  </head>
+  <body>
+  <p> Some text about the page here </p>
+  <!-- a comment is done like this: -->
+  <!-- A comment, that the visitor cannot see in the browser -->
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 8</h1>
+<xmp>
+  <html>
+  <head>
+  <title>Some page title</title>
+  </head>
+  <body>
+  <h1> The Title </h1>
+  <p> Some the about the homepage </p>
+  <ul>
+    <li>Scrambled Eggs</li>
+    <li>Blue Milk</li>
+    <li>Smashed Potatoes</li>
+    <li>Burger and Fries
+  </ul>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 8</h1>
+<xmp>
+  <html>
+  <head>
+  <title>Some page title</title>
+  </head>
+  <body>
+  <h1> The Title </h1>
+  <p> Some the about the homepage </p>
+  <ul>
+    <li>Scrambled Eggs</li>
+    <li>Blue Milk</li>
+    <li>Smashed Potatoes</li>
+    <li>Burger and Fries</li>
+    <!-- this closing li was missing -->
+  </ul>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistakes 9</h1>
+<xmp>
+  <html>
+  <head>
+  <title>Some page title</title>
+  </head>
+  <body>
+  <p> Some text about the page here </p>
+  </body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Solution 9</h1>
+<p>Indentation is important for the code quality. It improves the
+  understanding of the code, makes missing tags easier to find and
+  makes sure the code may be maintained by teammates or yourself
+  in the future.</p>
+<xmp>
+  <html>
+ 	 <head>
+ 		<title>Some page title</title>
+ 	 </head>
+  	<body>
+ 		<p> Some text about the page here </p>
+ 	</body>
+  </html>
+</xmp>
+</section>
+<section>
+<h1>Find the mistake 10</h1>
+<p>index.html</p>
+<xmp>
+  <html>
+  <head>
+  <link href="stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+  <p class=".warning"> Some text about the page here </p>
+  </body>
+  </html>
+</xmp>
+<p>stylesheet.css</p>
+<xmp>.warning {
+  color: red;
+  }</xmp>
+</section>
+<section>
+<h1>Solution 10</h1>
+<p>index.html</p>
+<xmp>
+  <html>
+  <head>
+  <link href="stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+  <p class="warning"><!-- in HTML the class is written without dot -->
+    Some text about the page here </p>
+  </body>
+  </html>
+</xmp>
+<p>stylesheet.css</p>
+<xmp>.warning {
+  color: red;
+  }</xmp>
+</section>
+<section>
+<h1>Find the mistake 11</h1>
+<p>index.html</p>
+<xmp>
+  <html>
+  <head>
+  <link href="stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+  <p class="warning"> Some text about the page here </p>
+  </body>
+  </html>
+</xmp>
+<p>stylesheet.css</p>
+<xmp>
+  <p>More text about the Homepage here</p>
+  .warning {
+  color: red;
+  }</xmp>
+</section>
+<section>
+<h1>Solution 11</h1>
+<p>No HTML in CSS</p>
+<p>index.html</p>
+<xmp>
+  <html>
+  <head>
+  <link href="stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+  <p class="warning"> Some text about the page here </p>
+  <p> More text about the Homepage here </p>
+  </body>
+  </html>
+</xmp>
+<p>stylesheet.css</p>
+<xmp>.warning {
+  color: red;
+  }</xmp>
+</section>
+<section>
+  <h1>Examples CSS syntax</h1>
+  <xmp>.warning {
+    color: red;
+    }</xmp>
+  <p style="color: red">All elements with the class "warning" should have red text</p>
+</section>
+<section>
+  <h1>Examples CSS syntax</h1>
+  <xmp>.error {
+    font-size: 2em;
+    }</xmp>
+  <p style="font-size: 2em;">All elements with the class "error" should have double sized text.</p>
+</section>
+<section>
+  <h1>Examples CSS syntax</h1>
+  <xmp>.sourcecode {
+    font-family: monospace;
+    }</xmp>
+  <p style="font-family: monospace;">All elements with the class "sourceode" should have monospaced text</p>
+</section>
+<section>
+  <h1>Examples CSS syntax</h1>
+  <xmp>.bigtext {
+    color: grey;
+    font-size: 40px;
+    font-weight: 700;
+    }</xmp>
+  <p style="color: grey; font-size: 40px; font-weight: 700">All elements with the class "bigtext" should have grey text with 40 pixels in size and
+    a bold font type.</p>
+</section>
+<section>
+  <h1>Examples CSS syntax</h1>
+  <xmp>.quotation {
+    color: blue;
+    font-family: Arial, sans-serif;
+    line-height: 2;
+    }</xmp>
+  <p style="color: blue; font-family: sans-serif; line-height: 2">All elements with the class "quotation" should have blue text with
+    the font type Arial, if it is available, or another type without serifs
+    and a line height of 2.</p>
+</section>
+<section>
+  <h1>
+  More CSS text properties
+  </h2>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Example values</th>
+    <tr>
+      <td>font-size</td>
+      <td>12px | 22px | 2em | 120%</td>
+    </tr>
+    <tr>
+      <td>font-family</td>
+      <td>serif | sans-serif | monospace | Arial, sans-serif</td>
+    </tr>
+    <tr>
+      <td>font-weight</td>
+      <td>300 | 500 | 700 | 900</td>
+    </tr>
+    <tr>
+      <td>font-style</td>
+      <td>normal | italic | oblique</td>
+    </tr>
+    <tr>
+      <td>line-height</td>
+      <td>normal | 1.5em | 180% | 6px | 0.8</td>
+    </tr>
+  </table>
+  <p>Play around with different classes or different styles</p>
+</section>
+<section>
+  <h1>Cascading</h1>
+  <p>An element may have several classes. It inherits the properties of every class</p>
+  <p>HTML</p>
+  <xmp><a href="index.html" class="colorized underlined">blue underlined text</a></xmp>
+  <p>CSS</p>
+  <xmp>.colorized {
+    color: blue;
+    }
+
+    .underlined {
+    text-decoration: underline;
+    }</xmp>
+</section>
+<section>
+  <h1>Practice</h1>
+  <p>Create a new folder, a new index.html and a new stylesheet.css<br>
+    Link index.html with stylesheet.css and recreate this colorful page</p>
+  <p><img width="50%" src="img/colorful_page_template.png"></p>
+</section>
+<section>
+  <h1>Example Solution</h1>
+  <p><img width="70%" src="img/colorful_page_solution.png"></p>
+</section>
+<section>
+  <h1>Element selectors</h1>
+  <p>Instead of classes you may choose to use elements as the selector</p>
+  <p><strong style="color: #AA2222; text-decoration: underline">This is not considered best practice.</strong></p>
+  <p>Only use it for specific cases.</p>
+  <p>Example element selectors</p>
+  <xmp>h1 {
+    color: red;
+    }
+
+    p {
+    line-height: 1.5;
+    }
+
+    header {
+    font-size: 1.5em;
+    }</xmp>
+</section>
+<section>
+<h1>ID selectors</h1>
+<p>index.html</p>
+<xmp>
+  <body id="news">
+  ...
+  Here comes the content of the News page of a website
+  ...
+  </body>
+</xmp>
+<p>stylesheet.css</p>
+<xmp>#news h1 {
+  background-color:#06c;
+  color:#fff;
+  }</xmp>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Box Model</h1>
+  <ul>
+    <li>Every element on the page is a rectangle.</li>
+    <li>Every rectangle can have a height, width, margin, borders and padding.</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Box Model</h1>
+  <ul>
+    <li>It's the job of the browser to figure out from our CSS the size of each rectangle and where it should be placed on the page.</li>
+    <li>The box model describes some of the rules for doing this.</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Box Model</h1>
+  <img src="img/boxmodel.jpg" width="378" height="155" class="pull-right">
+  <p>div {<br>
+    width:400px;<br>
+    height:100px;<br>
+    margin:20px;<br>
+    padding:20px;<br>
+    border-width:6px;<br>
+    }</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Box Model - Box Sizing</h1>
+  <img src="img/boxmodel2.jpg" width="378" height="155" class="pull-right">
+  <p>div {<br>
+    width:452px;<br>
+    height:100px;<br>
+    margin:20px;<br>
+    padding:20px;<br>
+    border-width:6px;<br>
+    box-sizing:border-box;<br>
+    }<br>
+    Width is 452px: 360+20x2+20x2+6+6</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Most used properties</h1>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Values</th>
+      <th>Used with Elements</th>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td>#RRGGBB (Red, Green, Blue hex values)</td>
+      <td>any element that contains text</td>
+    </tr>
+    <tr>
+      <td>text-align</td>
+      <td>left | right | center | justify</td>
+      <td>block elements h1..h6, p, li, etc.</td>
+    </tr>
+    <tr>
+      <td>Text-decoration</td>
+      <td>none | underline | overline | line-through | blink</td>
+      <td>mostly with a (anchor) elements</td>
+    </tr>
+    <tr>
+      <td>text-transformation</td>
+      <td>none | capitalize | uppercase | lowercase</td>
+      <td>any element that contains text</td>
+    </tr>
+    <tr>
+      <td>line-height</td>
+      <td>% or em/rem/px</td>
+      <td>block elements h1..h6, p, li, etc.</td>
+    </tr>
+    <tr>
+      <td>letter-spacing</td>
+      <td>normal or em/rem/px value</td>
+      <td>any element that contains text</td>
+    </tr>
+    <tr>
+      <td>font-family</td>
+      <td>font or font-family [, font or font-family ...]</td>
+      <td>any element that contains text</td>
+    </tr>
+    <tr>
+      <td>font-size</td>
+      <td>em/rem/px value</td>
+      <td>any element that contains text</td>
+    </tr>
+    <tr>
+      <td>font-style</td>
+      <td>normal | italic | oblique</td>
+      <td>any element that contains text</td>
+    </tr>
+    <tr>
+      <td>font-weight</td>
+      <td>normal | bold</td>
+      <td>any element that contains text</td>
+    </tr>
+  </table>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Most used properties</h1>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Values</th>
+      <th>Used with Elements</th>
+    </tr>
+    <tr>
+      <td>background-color</td>
+      <td>#RRGGBB (Red, Green, Blue hex values)</td>
+      <td>any element with a background</td>
+    </tr>
+    <tr>
+      <td>background-image</td>
+      <td>url(&quot;[image url]&quot;)</td>
+      <td>mostly with body</td>
+    </tr>
+    <tr>
+      <td>background-repeat</td>
+      <td>repeat | repeat-x | repeat-y | no-repeat</td>
+      <td>mostly with body</td>
+    </tr>
+    <tr>
+      <td>background-position</td>
+      <td>left | center | right | top | center | bottom</td>
+      <td>mostly with body</td>
+    </tr>
+    <tr>
+      <td>list-style-type</td>
+      <td>disc | square | circle</td>
+      <td>ul</td>
+    </tr>
+    <tr>
+      <td>list-style-type</td>
+      <td>decimal | lower-roman | upper-roman</td>
+      <td>ol</td>
+    </tr>
+    <tr>
+      <td>list-style-type</td>
+      <td>lower-alpha | upper-alpha</td>
+      <td>ol</td>
+    </tr>
+  </table>
+  <h3>Exercise</h3>
+  <ul>
+    <li>Start a new css file for the recipe.</li>
+    <li>Color the text (H1, H2, LI, P). Use https://color.adobe.com/ for colors.</li>
+    <li>Try outlines, backgrounds and different fonts.</li>
+    <li>Add an image as a background</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Selectors - ID</h1>
+  <p>Sometimes we don't want every element to be styled the same. So we need to use more specific selectors.</p>
+  <p>One type of selector is the id.</p>
+  <p>Each id must be unique - no more than one element on a single page can have the same id.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Selectors - ID</h1>
+  <p>&lt;div id="header"&gt;My Header&lt;/div&gt;</p>
+  <p>#header {<br>
+    background:yellow;<br>
+    }</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Selectors - classes</h1>
+  <p>Classes are another useful selector.</p>
+  <p>They can be applied to many elements.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Selectors - classes</h1>
+  <p>&lt;p class="citation"&gt;Blah blah&lt;/p&gt;<br>
+    &lt;p class="citation"&gt;Blah blah&lt;/p&gt;</p>
+  <p>.citation {<br>
+    border-left:10px solid green;<br>
+    }</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Nested selectors</h1>
+  <p>Selectors can be nested to give you more precise control.</p>
+  <p>&lt;div id="header"&gt;<br>
+    &lt;a href="#home"&gt;Home&lt;/a&gt;<br>
+    &lt;/div&gt;</p>
+  <p>#header a {<br>
+    color:purple;<br>
+    }</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Pseudo selectors</h1>
+  <p>Pseudo selectors give us additional control. There are a few different types but we will only look at :hover<br>
+    The hover state of an element is how it looks when the mouse is over it. It's often used on links.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Pseudo selectors</h1>
+  <p>&lt;a href="#home"&gt;Home&lt;/a&gt;</p>
+  <p>a {<br>
+    color:blue;<br>
+    }</p>
+  <p>a:hover {<br>
+    color:lightblue;<br>
+    }</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Connecting a stylesheet</h1>
+  <p>We can connect a stylesheet to our HTML document by linking to it in the &lt;head&gt; section</p>
+  <p>&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/demo-style.css&quot;&gt;</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Specificity</h1>
+  <p>Not all selectors are equal in "power"</p>
+  <p>If there are two or more rules that apply to an element, the most specific selector is used</p>
+  <p>If the two rules have equal specificity, then the latest rule is applied.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Specificity</h1>
+  <p>li {<br>
+    color:green;<br>
+    }</p>
+  <p>li.special {<br>
+    color:red;<br>
+    }</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Specificity</h1>
+  <img src="img/specificity.jpg" width="428" height="260" class="image"></section>
+
+<!-- slide-->
+<section>
+  <h1>Specificity</h1>
+  <table>
+    <tr>
+      <th>Selector Type</th>
+      <th>Value</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>inline</td>
+      <td>1000</td>
+      <td>&lt;p style=&quot;color:red;&quot;&gt;Hi&lt;/p&gt;</td>
+    </tr>
+    <tr>
+      <td>ID</td>
+      <td>100</td>
+      <td>#header</td>
+    </tr>
+    <tr>
+      <td>Class</td>
+      <td>10</td>
+      <td>.citation</td>
+    </tr>
+    <tr>
+      <td>element</td>
+      <td>1</td>
+      <td>ul</td>
+    </tr>
+  </table>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Specificity - Examples</h1>
+  <p><strong>#header a</strong><br>
+    1 id + 1 element = 100 + 1 = 101</p>
+  <p><strong>#main p.citation a</strong><br>
+    1 id + 1 class + 2 elements = 100 + 10 + 2 = 112</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Specificity</h1>
+  <p><a href="https://css-tricks.com/specifics-on-css-specificity/">https://css-tricks.com/specifics-on-css-specificity/</a></p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Activity</h1>
+  <p>Selectors Challenge!</p>
+  <ul>
+    <li><a href="http://www.w3schools.com/cssref/css_selectors.asp">http://www.w3schools.com/cssref/css_selectors.asp</a></li>
+    <li><a href="http://www.w3schools.com/cssref/default.asp">http://www.w3schools.com/cssref/default.asp</a></li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>CSS Layout</h1>
+  <p>We'll use the example files to explore CSS layout techniques:</p>
+  <ul>
+    <li>display.html</li>
+    <li>box-model.html</li>
+    <li>floats.html</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <p>Document flow refers to the way the browser positions elements on the page.</p>
+  <p>In general, the browser starts at the top left of the page and starts placing elements one after another.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <p>Document flow is most affected by a property called display.</p>
+  <p>There are two main display properties: block and inline.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <p>Block elements expand to the full width of the available horizontal space. The next element will be placed underneath.</p>
+  <p>A div is an example of a block level element. It expands to the full width of the available space.</p>
+  <div class="slide55"></div>
+</section>
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <p>Inline level elements are only as wide as their content. Multiple inline elements stack up next to each other and can be nested inside block level elements.</p>
+  <p>A span is an example of an inline level element.</p>
+  <span class="slide56"></span></section>
+
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <p>Block level elements are used for large pieces of content such as headings or text areas.</p>
+  <p>Inline level elements are used to style small areas, such as adding italics to a few words.</p>
+</section>
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <img src="img/slide58.jpg" width="305" height="264" class="image"></section>
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <table>
+    <tr>
+      <th>Block level elements</th>
+      <th>Inline level elements</th>
+    </tr>
+    <tr>
+      <td>header, footer, nav, section, main, div, table, form</td>
+      <td>span, img, a</td>
+    </tr>
+    <tr>
+      <td>h1,h2,h3,h4,h5,h6</td>
+      <td>strong, em</td>
+    </tr>
+    <tr>
+      <td>ul, ol, p</td>
+      <td>button, input, label, select, textarea</td>
+    </tr>
+  </table>
+</section>
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <p>Using the CSS property display we can override the default display setting and change an element to be block or inline.</p>
+  <p>This is useful because it's not possible to set the width or height of inline level elements.</p>
+</section>
+<!-- slide-->
+<section>
+  <h1>Document Flow</h1>
+  <p>We can also hide an element by setting<strong>display:none;</strong></p>
+</section>
+<!-- slide-->
+<section>
+  <h1>Floats</h1>
+  <p>Floated elements are the fundamental tool for creating complex, grid based layouts.</p>
+  <p>A floated element does not obey the normal rules of document flow.</p>
+</section>
+<!-- slide-->
+<section>
+  <h1>Floats</h1>
+  <p>A block level floated element does not expand to the available horizontal space. It expands only as far as its content needs, or as its width property.</p>
+  <p>The next element will not start below the floated element, but next to it.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Floats</h1>
+  <p>This makes it possible to create a layout with a main section and sidebar, or multiple columns.</p>
+  <img src="img/float.jpg" width="609" height="133" class="image"></section>
+
+<!-- slide-->
+<section>
+  <h1>Clearfix</h1>
+  <p>There is an annoying problem with floated elements.</p>
+  <p>The parent of a floated element can no longer &quot;see&quot; the height of its children. This means it treats the elements as if there were<strong>height:0;</strong></p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Clearfix</h1>
+  <p>We can solve this using the clearfix technique.</p>
+  <p>.clearfix:before, .clearfix:after {<br>
+    content:&quot;&quot;;<br>
+    display:table;<br>
+    }</p>
+  <p>.clearfix:after {<br>
+    clear:both;<br>
+    }</p>
+  <p>.clearfix {<br>
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */<br>
+    }</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Clearfix</h1>
+  <p>Apply the clearfix class to the parent of the floated elements.</p>
+  <p>&lt;div class=&quot;clearfix&quot; style=&quot;background:red;&quot;&gt;<br>
+    &lt;div style=&quot;width:50%; float:left;&quot;&gt;<br>
+    text<br>
+    &lt;/div&gt;</p>
+  <p>&lt;div style=&quot;width:50%;float:left;&quot;&gt;<br>
+    text<br>
+    &lt;/div&gt;<br>
+    &lt;/div&gt;</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Clearfix</h1>
+  <table class="noborder">
+    <tr>
+      <th colspan="2">Without clearfix</th>
+      <th colspan="2">With clearfix</th>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>text</td>
+      <td class="withclearfix">text</td>
+      <td class="withclearfix">text</td>
+    </tr>
+  </table>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Reset CSS</h1>
+  <p>Browsers apply different default styles</p>
+  <p>We use a short reset.css file to reset the default styles to all be the same across different browsers</p>
+  <p>This makes sure we are starting with a "clean slate"</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Putting it all together</h1>
+  <p>So CSS! Much styles!</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Web fonts</h1>
+  <p>Web fonts allow us to go beyond system fonts and install any fonts we like on our websites.</p>
+  <p>You shouldn't go too crazy though - more than two fonts will slow down the page load time.</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Web fonts - Google Fonts</h1>
+  <p>Free fonts resource<br>
+    Browse and make a selection, then add the generated link to your &lt;head&gt;<br>
+    Set your elements to have the desired fonts<br>
+    <a href="https://www.google.com/fonts">https://www.google.com/fonts</a></p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Web fonts with @font-face</h1>
+  <p>You can use commercial or free fonts<br>
+    Download a font pack and add it to a fonts folder on your website<br>
+    Use the @font-face command to tell the browser where to find the font files<br>
+    <a href="http://www.fontsquirrel.com/">http://www.fontsquirrel.com/</a></p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Cross Browser Issues</h1>
+  <p>Not all browsers interpret CSS in the same way</p>
+  <p>Mobile browsers may lack support for some properties</p>
+  <p>New properties are being introduced (CSS3)</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Cross Browser Issues</h1>
+  <p>Vendor prefixes are sometimes needed:</p>
+  <p>-moz-border-radius<br>
+    -webkit-border-radius<br>
+    -ms-border-radius<br>
+    -o-border-radius<br>
+    border-radius</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Cross Browser Issues</h1>
+  <p><a href="http://caniuse.com/">http://caniuse.com/</a>is an excellent resource for working out what cutting edge features you can and can't use.</p>
+  <p>Stick to the principle of progressive enhancement: don't make cutting edge features crucial to your design.</p>
+</section>
+<!-- slide-->
+<section>
+  <h1>Let's make a website</h1>
+  <h2>Exercises</h2>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Let's make a website</h1>
+  <h4>Let's build a personal website with three pages:</h4>
+  <ul>
+    <li>Home</li>
+    <li>Page 1</li>
+    <li>Page 2</li>
+  </ul>
+  <h4>Goals: to practice and learn...</h4>
+  <ul>
+    <li>How to link pages</li>
+    <li>How to use the different HTML elements inside a page</li>
+    <li>How to make a navigation</li>
+    <li>How to give a website a consistent look and feel</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Let's make a website</h1>
+  <h4>The website will include</h4>
+  <ul>
+    <li>at least 3 titles (H1-H6)</li>
+    <li>List/s (ordered or unordered - UL, OL &gt; LI)</li>
+    <li>Body text (Paragraphs, P)</li>
+    <li>Divs to make groups (DIV)</li>
+    <li>Images</li>
+  </ul>
+  <h4>We will</h4>
+  <ul>
+    <li>identify the pages with TITLE and ID</li>
+    <li>Identify some elements in the HTML with IDs and CLASSES</li>
+    <li>style the pages and elements with CSS</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Navigation</h1>
+  <p>How to build a horizontal navigation using:</p>
+  <ul>
+    <li>UL and LI</li>
+    <li>ID</li>
+    <li>CSS pseudo-selectors (:hover) and nested elements</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Tables</h1>
+  <p>Tables and their tags:</p>
+  <ul>
+    <li>When to use a table</li>
+    <li>TABLE, TR, TH, TD tags</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>HTML Structure</h1>
+  <p>Let's add structural elements to our pages</p>
+  <h4>&lt;header&gt;</h4>
+  <ul>
+    <li>Defines a header for a document or a section</li>
+  </ul>
+  <h4>&lt;nav&gt;</h4>
+  <ul>
+    <li>Defines a container for navigation links</li>
+  </ul>
+  <h4>&lt;section&gt;</h4>
+  <ul>
+    <li>Defines a section in a document</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>HTML Structure</h1>
+  <h4>&lt;article&gt;</h4>
+  <ul>
+    <li>Defines an independent self-contained article</li>
+  </ul>
+  <h4>&lt;aside&gt;</h4>
+  <ul>
+    <li>Defines content aside from the content (like a sidebar)</li>
+  </ul>
+  <h4>&lt;footer&gt;</h4>
+  <ul>
+    <li>Defines a footer for a document or a section</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Let's add these tags to our sites</h1>
+  <p>Please add these tags to your site,<strong>ONLY</strong>when is relevant:</p>
+  <ul>
+    <li>&lt;header&gt;</li>
+    <li>&lt;nav&gt;</li>
+    <li>&lt;footer&gt;</li>
+    <li>&lt;section&gt;</li>
+    <li>&lt;aside&gt;</li>
+    <li>&lt;article&gt;</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Image replacement and Table styling</h1>
+  <p>How to replace images for text with CSS</p>
+  <p><strong>Image Replacement</strong><br>
+    UL, LI<br>
+    Negative text indent, background properties, :hover</p>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Let's add a blog to our sites</h1>
+  <p>You can duplicate any of your pages to create the blog.</p>
+  <ul>
+    <li>The blog should include header, nav, footer, #content, aside and article.</li>
+    <li>Let's do it together.</li>
+    <li>Don't forget to add the blog to the navigation on the other pages.</li>
+  </ul>
+</section>
+
+<!-- slide-->
+<section>
+  <h1>Next classes</h1>
+  <p>The goal of these exercises is have your site ready to go responsive.<br>
+    This means, the site will adapt to different screens and devices such as:<br>
+  </p>
+  <ul>
+    <li>smart phones</li>
+    <li>tablets</li>
+    <li>laptop</li>
+    <li>desktop</li>
+  </ul>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+	padding:2em;
+}
+
+
+/*
+
+Orange: #ef5b2f
+Blue: #5dadc4 
+Light blue: #9ecedc
+very light blue: #dfeff3
+
+
+In this exercise, we'll style a calendar table without touching the HTML. Is very easy to put classes everywhere, but not always possible: sometimes you work with an HTML component that comes from another source; sometimes there is no time for the developer to work on it so is better to work with the HTML and see how far can we get.
+
+In this example we have a table inside a div with the ID blogpost. 
+
+Let's style the CALENDAR table. We have the caption (october) the first row with headings (TR > TH) and five rows of days and empty spaces (TR > TD)
+
+1 - first we set a background color to see what we work with. We make it wider to see it clearly
+2-  the columns have different widths. To give them the same width, we apply 14.3% (100/7) to the TH. It's a table, so the other rows will have the same width.
+3 - TH is centered-aligned and TD is left-aligned. We centered both.
+4 - Let's add a border to the cells. There are several options
+5 - Let's style the heading: font, color and background color
+6 - we can style the cells a bit with padding
+7 - then we style the caption
+
+NOW, let's complicate things a bit with pseudo-classes
+
+
+*/
+
+
+
+#blogpost table {
+}
+
+
+#blogpost table th {
+	width:14.3%;
+}
+
+
+#blogpost table th,
+#blogpost table td {
+	text-align:center;
+}
+
+#blogpost table th,
+#blogpost table td {
+	border-bottom:1px solid #9ecedc;
+}
+
+#blogpost table {
+	border-collapse:collapse;
+}
+
+#blogpost table th {
+	background-color:#5dadc4;
+	color:#fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+
+#blogpost table th,
+#blogpost table td {
+	padding:.5em;
+}
+
+
+#blogpost table caption {
+	font-family: 'Montserrat', sans-serif;
+	background-color:#ef5b2f;
+	border-bottom:1px solid #fff;
+	padding:.5em;
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#blogpost table tr:nth-child(even) td {
+	background-color:#dfeff3;
+}
+
+
+#blogpost table tr:nth-child(2) td,
+#blogpost table tr:nth-child(3) td,
+#blogpost table tr:nth-child(4) td {
+	color:#ccc;
+}
+
+
+
+
+
+#blogpost table tr:nth-child(5) td:nth-child(1),
+#blogpost table tr:nth-child(5) td:nth-child(2),
+#blogpost table tr:nth-child(5) td:nth-child(3) {
+	color:#ccc;
+}
+
+
+#blogpost table tr:nth-child(5) td:nth-child(4) {
+	color:#fff;
+	background-color:#ef5b2f;
+}
+
+#blogpost table tr:nth-child(5) td:nth-child(4):hover {
+	background-color:#000;
+}
+
+/* */
+

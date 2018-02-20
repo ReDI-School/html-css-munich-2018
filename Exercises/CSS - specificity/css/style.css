@@ -1,0 +1,135 @@
+
+
+/* This is a CSS comment */
+/* modify and create as much as you want */
+
+/* ReDI colors
+
+Orange: #ef5b2f
+Blue: #5dadc4 
+Light blue: #9ecedc
+very light blue: #dfeff3
+
+*/
+
+
+
+h1 {
+	color:#5dadc4;
+}
+
+h1 span {
+	color:#ef5b2f;
+}
+
+nav {
+	background-color:#eee;
+	display:block;
+}
+
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+
+li {
+	display:inline-block;
+	font-size:1.4em;
+}
+
+
+li a:hover  {
+	background-color:#ef5b2f;
+}
+
+
+
+
+
+#content p {
+	font-size:1.5em;
+}
+
+/* subnavigation */
+
+ul ul {
+	display:none;
+}
+
+ul li:hover ul {
+	display:block;
+}
+
+ul ul li {
+	display:block;
+}
+
+ul ul li {
+	font-size:.85em;
+	width:15em;
+	border-bottom:1px solid #fff;
+}
+
+ul ul li a {
+	background-color:#70bdd0;
+}
+
+ul li {
+	position:relative;
+}
+
+ul li:hover ul {
+	position:absolute;
+	top:2.3em;
+}
+
+/* Specificity example 
+
+#mainheader 
+#navlist 
+.special 
+
+
+li a {
+	background-color:#227597;
+}
+
+*/
+
+#toplist.navlist li a {
+	background-color:#5dadc4;
+	padding:.5em 1em;
+	color:#fff;
+	text-decoration:none;
+	display:block;
+}
+
+
+li.special a {
+	background-color:#227597;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

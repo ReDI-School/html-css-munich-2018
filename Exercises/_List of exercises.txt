@@ -1,0 +1,32 @@
+CSS - Berlin Page
+This is an HTML page with headings, tables, lists and paragraphs, linked to an empty CSS file. The goal is to focus only on CSS.
+
+HTML and CSS - Website Project
+This is a folder with a few pages that are linked and only include the navigation. The goal was to make the students add their content for each page and style the navigation for the whole site.
+
+CSS - Horizontal Navigation
+This is just a basic horizontal navigation example. It shows how to go from an UL to a standard nav with hover. We were commenting the CSS code and revealing step by step so they could see the changes.
+
+CSS - Horizontal Navigation with Dropdown
+Same as previous, this time with a dropdown menu under one of the items.
+
+CSS - Calendar
+Styling of a Calendar made with a table. 
+
+CSS - Bootstrap HTML
+The HTML in these examples were copied from a website. The goal here was to show them how to style HTML that comes from other source when they can't edit it. There's a lot of HTML tags and classes that they won't need, so they should identify and style only what they need. 
+
+CSS - Syntax
+This exercise was done on paper and validated with the HTML file. It was a good exercise and we could do many others like this, to take them away from the keyboard :)
+
+CSS - Media Queries
+A basic example of media queries.
+
+CSS - Specificity
+Examples of Specificity. 
+
+Cards - HTML or CSS
+This is a basic exercise made on paper. We printed these pdfs, then cut them to make paper cards and asked the students to make pairs between the code and the display. We did these exercises almost at the end of the course, to help a student that was a bit behind, but it would be very useful to do more of these on an early stage, for all students.
+
+Responsive - Best Practices
+Here we showed how to define the main blocks of an HTML document.

@@ -1,0 +1,124 @@
+
+
+/* This is a CSS comment */
+/* modify and create as much as you want */
+
+/* ReDI colors
+
+Orange: #ef5b2f
+Blue: #5dadc4 
+Light blue: #9ecedc
+very light blue: #dfeff3
+
+STEPS
+1 - Apply background color to all elements to know where they are
+2 - Hide the bullets and make the padding and margin of the UL zero. 
+3 - Put all the sections (the LI items) on the same line. 
+4 - Define how the navigation will be: left or right align or full width.
+5 - make the buttons bigger
+6 - add interaction to the buttons
+7 - add the right fonts
+8 - add colors
+9 - explore other styling options, like outlines
+
+Flying menu: How it works
+A sub menu is a sublist of a list item. In HTML that means an UL of a LI
+The submenu appears only when the cursor is on top of the selected item. In this case is PARTNERS. 
+So... we need to hide it everywhere, except when you are over PARTNERS.
+
+How can we hide an element? With display:_________
+
+We display it when we're on top of PARTNERS. How can we tell  when you are on top of an element? Using _______
+
+
+*/
+
+
+
+
+h1 {
+	color:#5dadc4;
+}
+
+h1 span {
+	color:#ef5b2f;
+}
+
+nav {
+	background-color:#eee;
+	display:block;
+}
+
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+
+li {
+	display:inline-block;
+	font-size:1.4em;
+}
+
+li a {
+	background-color:#5dadc4;
+	padding:.5em 1em;
+	color:#fff;
+	text-decoration:none;
+	display:block;
+}
+
+li a:hover  {
+	background-color:#ef5b2f;
+}
+
+#coursespage #courses a {
+	background-color:#005b89;
+}
+
+
+
+#content p {
+	font-size:1.5em;
+}
+
+/* subnavigation */
+
+
+
+ul ul {
+	display:none;
+}
+
+
+
+
+ul li:hover ul {
+	display:block;
+}
+
+
+ul ul li {
+	display:block;
+}
+
+ul ul li {
+	font-size:.85em;
+	width:15em;
+	border-bottom:1px solid #fff;
+}
+
+
+ul ul li a {
+	background-color:#70bdd0;
+}
+
+ul li {
+	position:relative;
+}
+
+ul li:hover ul {
+	position:absolute;
+	top:2.3em;
+}

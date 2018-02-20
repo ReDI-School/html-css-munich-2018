@@ -1,0 +1,62 @@
+body {
+	padding:2em;
+}
+
+
+
+h1 {
+	color:#5dadc4;
+}
+
+h1 span {
+	color:#ef5b2f;
+}
+
+#pseudoclasses {
+	width:70%;
+}
+
+#pseudoclasses h2 {
+	font-size:2em;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#pseudoclasses h3 {
+	font-size:1.6em;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#pseudoclasses li,
+#pseudoclasses p {
+	font-size:1.3em;
+}
+
+#pseudoclasses li {
+	display:block;
+}
+
+
+/* __________ COLORS */
+
+a:link {
+	color:#f00;
+}
+
+a:visited {
+	color:#999;
+}
+
+a:hover {
+	color:#090;
+}
+
+a:active {
+	color:#00c;
+}
+
+
+
+ul.example li:nth-child(2) {
+	background-color:#ef5b2f;
+	color:#fff;
+}
