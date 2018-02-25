@@ -1,0 +1,34 @@
+.big {
+  font-weight:  400;
+  font-size: 3em;
+}
+
+.description {
+  font-size: 1.5em;
+}
+
+.directons {
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+.ingredents {
+  line-height: 2em;
+}
+
+.mandatory {
+  color:blue;
+}
+
+.small{
+  font-weight: 300;
+  color: green;
+}
+
+.title {
+  font-family: Arial, sans-serif;
+}
+
+.highlight {
+  background-color: yellow;
+}
