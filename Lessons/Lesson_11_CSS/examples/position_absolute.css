@@ -1,0 +1,49 @@
+.poster {
+  width: 400px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(dog.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.poster div {
+  box-sizing: border-box;
+  position: absolute;
+  font-family: Helvetica;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(0,0,0,0.75);
+  padding: 10px;
+}
+
+.poster .header {
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.poster .title {
+  top: 320px;
+  left: 40px;
+  font-size: 30px;
+}
+
+.poster .subtitle {
+  top: 380px;
+  left: 40px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.poster .footer {
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  font-size: 20px;
+  text-align: center;
+}

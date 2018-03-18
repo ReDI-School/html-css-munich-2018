@@ -1,0 +1,15 @@
+.container {
+  width: 500px;
+  font-size: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.help {
+  font-size: 22px;
+  position: fixed;
+  right: 30px;
+  top: 200px;
+}
