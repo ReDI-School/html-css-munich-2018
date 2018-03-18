@@ -1,0 +1,22 @@
+body {
+  color: tomato;
+  background-color: rgb(250,250,210);
+}
+
+hr {
+  height: 2px;
+  border: none;
+  background-color: tomato;
+}
+
+table {
+  width: 20%;
+}
+
+table, td, tr, img {
+  border: 1px solid tomato;
+}
+
+img {
+  width: 25%
+}

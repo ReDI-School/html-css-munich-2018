@@ -1,0 +1,13 @@
+span {
+	display: inline-block;
+	margin: 8px;
+	box-shadow: 1px 2px 2px grey;
+}
+
+.magazine1  {
+ 	background-color: teal;
+ 	color:white;
+ 	font-family: Verdana;
+	font-weight: 900;
+	text-transform: uppercase;
+}

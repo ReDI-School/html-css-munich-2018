@@ -6,14 +6,14 @@ body {
 /*
 
 Orange: #ef5b2f
-Blue: #5dadc4 
+Blue: #5dadc4
 Light blue: #9ecedc
 very light blue: #dfeff3
 
 
 In this exercise, we'll style a calendar table without touching the HTML. Is very easy to put classes everywhere, but not always possible: sometimes you work with an HTML component that comes from another source; sometimes there is no time for the developer to work on it so is better to work with the HTML and see how far can we get.
 
-In this example we have a table inside a div with the ID blogpost. 
+In this example we have a table inside a div with the ID blogpost.
 
 Let's style the CALENDAR table. We have the caption (october) the first row with headings (TR > TH) and five rows of days and empty spaces (TR > TD)
 
@@ -92,56 +92,30 @@ NOW, let's complicate things a bit with pseudo-classes
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#blogpost table tr:nth-child(even) td {
-	background-color:#dfeff3;
+tr:nth-child(odd) {
+   background-color: lightblue;
 }
 
-
-#blogpost table tr:nth-child(2) td,
-#blogpost table tr:nth-child(3) td,
-#blogpost table tr:nth-child(4) td {
-	color:#ccc;
+p:nth-child(odd) {
+	font-size: 500px;
 }
 
 
 
 
 
-#blogpost table tr:nth-child(5) td:nth-child(1),
-#blogpost table tr:nth-child(5) td:nth-child(2),
-#blogpost table tr:nth-child(5) td:nth-child(3) {
-	color:#ccc;
-}
 
 
-#blogpost table tr:nth-child(5) td:nth-child(4) {
-	color:#fff;
-	background-color:#ef5b2f;
-}
 
-#blogpost table tr:nth-child(5) td:nth-child(4):hover {
-	background-color:#000;
-}
+
+
+
+
+
+
+
+
+
+
 
 /* */
-
