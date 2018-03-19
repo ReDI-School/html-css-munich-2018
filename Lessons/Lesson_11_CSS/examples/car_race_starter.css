@@ -1,0 +1,24 @@
+.racing_track {
+  background-color: darkgrey;
+  position: relative;
+  width: 600px;
+  height: 200px;
+}
+
+.car1 {
+  background: url('car1.jpg');
+  background-size: contain;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 25px;
+}
+
+.car2 {
+  background: url('car2.jpg');
+  background-size: contain;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  bottom: 25px;
+}
