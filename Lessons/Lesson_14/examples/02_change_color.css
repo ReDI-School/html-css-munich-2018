@@ -1,0 +1,27 @@
+@keyframes changecolor {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: orange;
+  }
+  30% {
+    background-color: yellow;
+  }
+  40% {
+    background-color: green;
+  }
+  60% {
+    background-color: turquoise;
+  }
+  80% {
+    background-color: purple;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+body {
+  animation: changecolor 5s infinite alternate;
+}

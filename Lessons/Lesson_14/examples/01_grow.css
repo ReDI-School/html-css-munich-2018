@@ -1,0 +1,12 @@
+@keyframes grow {
+  0% {
+    font-size: 64px;
+  }
+  100% {
+    font-size: 172px;
+  }
+}
+
+.growing {
+  animation: grow 2s infinite;
+}
