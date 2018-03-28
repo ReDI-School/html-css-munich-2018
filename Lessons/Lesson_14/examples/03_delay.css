@@ -1,0 +1,31 @@
+@keyframes pulse {
+  0% {
+    font-size: 30px;
+    color: black;
+  }
+  100% {
+    font-size: 50px;
+    color: red;
+  }
+}
+
+body {
+  padding-left: 100px;
+  padding-top: 100px;
+}
+
+.element_1 {
+  animation: pulse 2s 0s infinite alternate;
+}
+
+.element_2 {
+  animation: pulse 2s 0.5s infinite alternate;
+}
+
+.element_3 {
+  animation: pulse 2s 1s infinite alternate;
+}
+
+.element_4 {
+  animation: pulse 2s 1.5s infinite alternate;
+}

@@ -1,0 +1,475 @@
+<html>
+	<head>
+		<title>ReDI HTML/CSS 14</title>
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
+		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+		<style>
+			.reveal pre {
+				margin: 0;
+			}
+			.monospace {
+				font-family: monospace !important;
+			}
+			.ball {
+				width: 100px;
+				height: 100px;
+				background-color: lightgreen;
+				border-radius: 50%;
+				margin: 1em auto !important;
+				font-size: 80% !important;
+				color: red;
+			}
+
+			@keyframes bounce {
+				0% {
+					bottom: 60%;
+					transform: scale(0.8, 1.2);
+				}
+				40% {
+					transform: scale(1, 1);
+					bottom: 5%;
+				}
+				50% {
+					bottom: 0;
+					transform: scale(1.3, .7);
+				}
+				65% {
+					bottom: 5%;
+					transform: scale(1, 1);
+				}
+				90% {
+					bottom: 55%;
+				}
+				100% {
+					bottom: 60%;
+					transform: scale(0.8, 1.2);
+				}
+			}
+
+			@keyframes jump {
+				0% {
+					bottom: 60%;
+				}
+				40% {
+					bottom: 5%;
+				}
+				50% {
+					bottom: 0;
+				}
+				65% {
+					bottom: 5%;
+				}
+				90% {
+					bottom: 55%;
+				}
+				100% {
+					bottom: 60%;
+				}
+			}
+
+			@keyframes morph {
+				0% {
+					transform: scale(2, 2);
+					background-color: #5BC0EB;
+				}
+				20% {
+					transform: scale(3, 1.5);
+					background-color: #FDE74C;
+				}
+				40% {
+					transform: scale(1.5, 3);
+					background-color: #9BC53D;
+				}
+				60% {
+					transform: scale(4, 4);
+					background-color: #E55934;
+				}
+				80% {
+					transform: scale(0.4, 0.4);
+					background-color: #FA7921;
+				}
+				100% {
+					transform: scale(2, 2);
+					background-color: #5BC0EB;
+				}
+			}
+
+
+			.ball-container {
+				position: relative;
+				margin: 1em auto !important;
+				width: 100px;
+				height: 50vh;
+			}
+			.left.ball-container {
+				height: 30vh;
+				float: left;
+			}
+			.bouncing.ball {
+				position: absolute;
+				animation: bounce 1s ease-in-out infinite;
+			}
+			.bouncing.ball.no-ease {
+				animation: bounce 1s infinite;
+			}
+			.jumping.ball {
+				position: absolute;
+				animation: jump 1s infinite;
+			}
+			.morphing.ball {
+				animation: morph 2s infinite ease-in-out;
+				margin: 5em auto !important;
+			}
+
+			@keyframes swipe {
+				0% {
+					margin-left: 0;
+					margin-right: 30vw;
+				}
+				50% {
+					margin-left: 30vw;
+					margin-right: 0;
+				}
+				100% {
+					margin-left: 0;
+					margin-right: 30vw;
+				}
+			}
+
+			table.swiper-table {
+				color: white;
+				width: 100%;
+			}
+
+			table.swiper-table td {
+				padding: 0;
+				padding-top: 0.3em;
+				padding-bottom: 0.3em;
+			}
+
+			.swiper {
+		    border-radius: 50%;
+				background-color: lightblue;
+				width: 1em;
+				height: 1em;
+				animation: swipe 2s infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>CSS Animations</h1>
+					<h3>ReDI HTML+CSS</h3>
+				</section>
+
+				<section>
+					<p>CSS animations consist of two parts:</p>
+					<ol>
+						<li class="fragment"><b>Keyframes:</b> Define the animation itself</li>
+						<li class="fragment"><b>Style property:</b> Define how the animation should be played</li>
+					</ol>
+				</section>
+
+				<section>
+					<p>Example</p>
+					<p data-height="400" data-theme-id="0" data-slug-hash="MVrXRm" data-default-tab="css,result" data-user="cpury" data-embed-version="2" data-pen-title="ReDI HTML: 14-01 Grow" class="codepen">See the Pen <a href="https://codepen.io/cpury/pen/MVrXRm/">ReDI HTML: 14-01 Grow</a> by Max (<a href="https://codepen.io/cpury">@cpury</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+
+				<section style="font-size: 70% !important;">
+					<p>How to make it loop?</p>
+					<ol>
+						<li class="fragment">
+							Edit the animation:
+							<pre>
+								<code class="css" data-trim data-noescape>
+@keyframes grow {
+	0% {
+		font-size: 64px;
+	}
+	50% {
+		font-size: 172px;
+	}
+	100% {
+		font-size: 64px;
+	}
+ }
+								</code>
+							</pre>
+						</li>
+						<li class="fragment">
+							Add a setting to the animation property:
+							<pre>
+								<code class="css" data-trim data-noescape>
+animation: grow 2s infinite alternate;
+								</code>
+							</pre>
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h3>@keyframes: Syntax</h3>
+					<p>Define an animation step by step:</p>
+					<pre>
+						<code class="css" data-trim>
+@keyframes animation_name { 
+	time_1: { 
+		property: value; 
+		… 
+	} 
+	time_2: {
+		property: value; 
+		… 
+	}
+	…
+ }
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>animation: Syntax</h3>
+					<p>Define how an animation should be played on an element:</p>
+					<br>
+					<p class="monospace" style="font-size:80%;">animation: animation_name duration count …;</p>
+				</section>
+
+				<section>
+					<p>Can you recreate this?</p>
+					<p data-height="400" data-theme-id="0" data-slug-hash="PREaMo" data-default-tab="result" data-user="cpury" data-embed-version="2" data-pen-title="ReDI 14-02 Rainbow Party" class="codepen">See the Pen <a href="https://codepen.io/cpury/pen/PREaMo/">ReDI 14-02 Rainbow Party</a> by Max (<a href="https://codepen.io/cpury">@cpury</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					<p>Hint: Add the style to the <span class="monospace">&#60;body&#62;</span></p>
+				</section>
+
+				<section>
+					<p>Delay the start of the animation:</p>
+					<br>
+					<p class="monospace">animation: my-dance-animation 5s <u>2s</u>;</p>
+				</section>
+
+				<section>
+					<p>Can you recreate this?</p>
+					<p data-height="400" data-theme-id="0" data-slug-hash="bvajJo" data-default-tab="result" data-user="cpury" data-embed-version="2" data-pen-title="ReDI 14-03 Pulse" class="codepen">See the Pen <a href="https://codepen.io/cpury/pen/bvajJo/">ReDI 14-03 Pulse</a> by Max (<a href="https://codepen.io/cpury">@cpury</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					<p>Define only one animation. Use it with different delays!</p>
+				</section>
+
+				<section>
+					<p>You can control how many times an animation should be repeated:</p>
+					<br>
+					<p class="monospace">animation: changecolor 1s <u>1</u>;</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>An animation only sets styles while it's playing</li>
+						<li class="fragment">Before and after the animation, the element's own styles are applied</li>
+						<li class="fragment">What if we want to keep that style?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Fill Mode</h3>
+					<p>Possible values:</p>
+					<ul>
+						<li class="fragment"><b>backwards</b>: Apply first animation styles before it is played</li>
+						<li class="fragment"><b>forwards</b>: Keep final animation styles after it is played</li>
+						<li class="fragment"><b>both</b>: Keep styles before and after</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Let's try it out:</p>
+					<p data-height="400" data-theme-id="0" data-slug-hash="xWpaEb" data-default-tab="css,result" data-user="cpury" data-embed-version="2" data-pen-title="ReDI 14-04 Fill Mode" class="codepen">See the Pen <a href="https://codepen.io/cpury/pen/xWpaEb/">ReDI 14-04 Fill Mode</a> by Max (<a href="https://codepen.io/cpury">@cpury</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+
+				<section>
+					<p>How to create a bouncing ball?</p>
+					<div class="ball-container">
+						<div class="bouncing ball"></div>
+					</div>
+					<div class="fragment">
+						<p>Let's do it together step by step!</p>
+					</div>
+				</section>
+
+				<section>
+					<p>How to make a ball?</p>
+					<div class="ball"></div>
+					<div class="fragment">
+						<pre>
+							<code class="css" data-trim>
+width: 100px;
+height: 100px;
+border-radius: 50%;
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section>
+					<p>How to make the ball jump up and down?</p>
+					<div class="ball-container" style="height: 30vh;">
+						<div class="jumping ball"></div>
+					</div>
+					<ul class="fragment" style="font-size: 80% !important;">
+						<li>Try to recreate the movement in a CSS animation</li>
+						<li>Use <span class="monospace">position: absolute;</span> and top or bottom properties</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>My solution:</p>
+					<pre>
+						<code class="css" style="font-size: 20px; line-height: 1em;" data-trim>
+@keyframes bounce {
+	0% {
+		bottom: 60%;
+	}
+	40% {
+		bottom: 5%;
+	}
+	50% {
+		bottom: 0%;
+	}
+	65% {
+		bottom: 5%;
+	}
+	90% {
+		bottom: 55%;
+	}
+	100% {
+		bottom: 60%;
+	}
+}
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<p>How to deform the ball?</p>
+					<div class="morphing ball"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(1, 2);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(1, 2);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(2, 1);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(2, 1);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(3, 3);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(3, 3);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(0.2, 0.2);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(0.2, 0.2);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(1, 1);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(1, 1);"></div>
+					<br>
+					<p class="fragment">
+						&#8594; <span class="monospace">scale(width, height)</span>
+					</p>
+					<p class="fragment">
+						&#8594; The values are factors!
+						<br>
+						1 = 100%, 0.5 = 50%, 2 = 200%, etc.
+					</p>
+				</section>
+
+				<section>
+					<p>Can you make the ball bounce?</p>
+					<p data-height="400" data-theme-id="0" data-slug-hash="XEVxgM" data-default-tab="result" data-user="cpury" data-embed-version="2" data-pen-title="ReDI 14-05 Bouncing Ball" class="codepen">See the Pen <a href="https://codepen.io/cpury/pen/XEVxgM/">ReDI 14-05 Bouncing Ball</a> by Max (<a href="https://codepen.io/cpury">@cpury</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+
+				<section>
+					<p>Can we make the animation smoother?</p>
+					<br>
+					<p class="monospace fragment" style="font-size: 80%;">animation: bounce 1s <u>ease-in-out</u> infinite;</p>
+					<div class="double ball-container">
+						<div class="bouncing ball" style="background-color: lightblue; left: -80px; animation-timing-function: initial;">Without</div>
+						<div class="bouncing ball" style="left: 80px;">With</div>
+					</div>
+				</section>
+
+				<section>
+					<p class="monospace">Timing Function</p>
+					<br>
+					<table class="swiper-table">
+						<tr>
+							<td>
+								<div class="swiper" style="animation-timing-function: linear;"></div>
+							</td>
+							<td class="monospace">
+								linear
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease;"></div>
+							</td>
+							<td class="monospace">
+								ease
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease-in;"></div>
+							</td>
+							<td class="monospace">
+								ease-in
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease-out;"></div>
+							</td>
+							<td class="monospace">
+								ease-out
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease-in-out;"></div>
+							</td>
+							<td class="monospace">
+								ease-in-out
+							</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+		</div>
+
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+				],
+			});
+		</script>
+	</body>
+</html>
