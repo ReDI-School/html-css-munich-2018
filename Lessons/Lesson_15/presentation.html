@@ -1,0 +1,694 @@
+<html>
+	<head>
+		<title>ReDI HTML/CSS 15</title>
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
+		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+		<style>
+			body {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased !important;
+				-moz-font-smoothing: antialiased !important;
+				text-rendering: optimizelegibility !important;
+			}
+
+			.reveal pre {
+				margin: 0;
+				line-height: 1.05em;
+				width: 100%;
+				box-shadow: none;
+			}
+			.monospace {
+				font-family: monospace !important;
+			}
+			.ball {
+				width: 100px;
+				height: 100px;
+				background-color: lightgreen;
+				border-radius: 50%;
+				margin: 1em auto !important;
+				font-size: 80% !important;
+				color: red;
+			}
+
+			@keyframes bounce {
+				0% {
+					bottom: 60%;
+					transform: scale(0.8, 1.2);
+				}
+				40% {
+					transform: scale(1, 1);
+					bottom: 5%;
+				}
+				50% {
+					bottom: 0;
+					transform: scale(1.3, .7);
+				}
+				65% {
+					bottom: 5%;
+					transform: scale(1, 1);
+				}
+				90% {
+					bottom: 55%;
+				}
+				100% {
+					bottom: 60%;
+					transform: scale(0.8, 1.2);
+				}
+			}
+
+			@keyframes jump {
+				0% {
+					bottom: 60%;
+				}
+				40% {
+					bottom: 5%;
+				}
+				50% {
+					bottom: 0;
+				}
+				65% {
+					bottom: 5%;
+				}
+				90% {
+					bottom: 55%;
+				}
+				100% {
+					bottom: 60%;
+				}
+			}
+
+			@keyframes morph {
+				0% {
+					transform: scale(2, 2);
+					background-color: #5BC0EB;
+				}
+				20% {
+					transform: scale(3, 1.5);
+					background-color: #FDE74C;
+				}
+				40% {
+					transform: scale(1.5, 3);
+					background-color: #9BC53D;
+				}
+				60% {
+					transform: scale(4, 4);
+					background-color: #E55934;
+				}
+				80% {
+					transform: scale(0.4, 0.4);
+					background-color: #FA7921;
+				}
+				100% {
+					transform: scale(2, 2);
+					background-color: #5BC0EB;
+				}
+			}
+
+
+			.ball-container {
+				position: relative;
+				margin: 1em auto !important;
+				width: 100px;
+				height: 50vh;
+			}
+			.left.ball-container {
+				height: 30vh;
+				float: left;
+			}
+			.bouncing.ball {
+				position: absolute;
+				animation: bounce 1s ease-in-out infinite;
+			}
+			.bouncing.ball.no-ease {
+				animation: bounce 1s infinite;
+			}
+			.jumping.ball {
+				position: absolute;
+				animation: jump 1s infinite;
+			}
+			.morphing.ball {
+				animation: morph 2s infinite ease-in-out;
+				margin: 5em auto !important;
+			}
+
+			@keyframes swipe {
+				0% {
+					margin-left: 0;
+					margin-right: 30vw;
+				}
+				50% {
+					margin-left: 30vw;
+					margin-right: 0;
+				}
+				100% {
+					margin-left: 0;
+					margin-right: 30vw;
+				}
+			}
+
+			table.swiper-table {
+				color: white;
+				width: 100%;
+			}
+
+			table.swiper-table td {
+				padding: 0;
+				padding-top: 0.3em;
+				padding-bottom: 0.3em;
+			}
+
+			.swiper {
+		    border-radius: 50%;
+				background-color: lightblue;
+				width: 1em;
+				height: 1em;
+				animation: swipe 2s infinite;
+			}
+
+			.question {
+				color: lightyellow;
+			}
+
+			.answer {
+				color: lightgreen;
+			}
+
+			@keyframes my_animation {
+			  0% {
+			    height: 50px;
+			    background-color: red;
+			  }
+			  20% {
+			    height: 20px;
+			  }
+			  50% {
+			    background-color: blue;
+			  }
+			  100% {
+			    height: 200px;
+			    background-color: green;
+			  }
+			}
+
+			.bar {
+			  width: 100px;
+			  animation: my_animation 1s alternate infinite;
+			}
+
+			.reveal section img.cat {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    width: 120px;
+		    height: 120px;
+		    margin: -60px 0 0 -60px;
+		    animation: spin 2s linear infinite;
+			}
+
+			@keyframes spin {
+			  100% {
+			    transform:rotate(360deg);
+			  }
+			}
+
+			.reveal h1.equals {
+				font-size: 4em;
+				margin-top: -10px;
+				margin-bottom: -20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>CSS Animations Part 2</h1>
+					<h3>ReDI HTML+CSS</h3>
+				</section>
+
+				<section>
+					<p class="question">
+						Which two parts do CSS animations consist of?<br>
+						<span class="fragment answer">&#8594; @keyframes and animation-property</span>
+					</p>
+					<p class="fragment question">
+						What can go into a keyframe definition?<br>
+						<span class="fragment answer">&#8594; Any CSS style</span>
+					</p>
+					<p class="fragment question">
+						What happens between keyframes?<br>
+						<span class="fragment answer">&#8594; The browser automatically interpolates</span>
+					</p>
+					<p class="fragment question">
+						How do you decide the duration of an animation?<br>
+						<span class="fragment answer monospace">&#8594; animation: my_animation <u>1s</u>;</span>
+					</p>
+					<p class="fragment question">
+						How can an animation be played infinitely<br>
+						<span class="fragment answer monospace">&#8594; animation: my_animation 1s <u>infinite</u>;</span>
+					</p>
+				</section>
+
+				<section>
+					<h3>What does this animation do?</h3>
+					<pre style="width: 50%; float: left;">
+						<code class="css" data-trim>
+@keyframes my_animation {
+  0% {
+    height: 50px;
+    background-color: red;
+  }
+  20% {
+    height: 20px;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    height: 200px;
+    background-color: green;
+  }
+}
+						</code>
+					</pre>
+					<div style="width: 2em; height: 40vh; position: absolute; right: 20vw; top: 20vh;" class="fragment">
+						<div class="bar">
+					</div>
+				</section>
+
+				<section>
+					<p>How to create a bouncing ball?</p>
+					<div class="ball-container">
+						<div class="bouncing ball"></div>
+					</div>
+					<div class="fragment">
+						<p>Let's do it together step by step!</p>
+					</div>
+				</section>
+
+				<section>
+					<p>How to make a ball?</p>
+					<div class="ball"></div>
+					<div class="fragment">
+						<pre>
+							<code class="css" data-trim>
+width: 100px;
+height: 100px;
+border-radius: 50%;
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section>
+					<p>How to make the ball jump up and down?</p>
+					<div class="ball-container" style="height: 30vh;">
+						<div class="jumping ball"></div>
+					</div>
+					<ul class="fragment" style="font-size: 80% !important;">
+						<li>Try to recreate the movement in a CSS animation</li>
+						<li>Use <span class="monospace">position: absolute;</span> and top or bottom properties</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>My solution:</p>
+					<pre>
+						<code class="css" style="font-size: 20px; line-height: 1em;" data-trim>
+@keyframes bounce {
+	0% {
+		bottom: 60%;
+	}
+	40% {
+		bottom: 5%;
+	}
+	50% {
+		bottom: 0%;
+	}
+	65% {
+		bottom: 5%;
+	}
+	90% {
+		bottom: 55%;
+	}
+	100% {
+		bottom: 60%;
+	}
+}
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<p>How to deform the ball?</p>
+					<div class="morphing ball"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(1, 2);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(1, 2);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(2, 1);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(2, 1);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(3, 3);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(3, 3);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(0.2, 0.2);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(0.2, 0.2);"></div>
+				</section>
+
+				<section>
+					<p class="monospace">transform: scale(1, 1);</p>
+					<br>
+					<div class="fragment ball" style="transform: scale(1, 1);"></div>
+					<br>
+					<p class="fragment">
+						&#8594; <span class="monospace">scale(width, height)</span>
+					</p>
+					<p class="fragment">
+						&#8594; The values are factors!
+						<br>
+						1 = 100%, 0.5 = 50%, 2 = 200%, etc.
+					</p>
+				</section>
+
+				<section>
+					<p>Can you make the ball bounce?</p>
+					<p data-height="300" data-theme-id="0" data-slug-hash="XEVxgM" data-default-tab="result" data-user="cpury" data-embed-version="2" data-pen-title="ReDI 14-05 Bouncing Ball" class="codepen">See the Pen <a href="https://codepen.io/cpury/pen/XEVxgM/">ReDI 14-05 Bouncing Ball</a> by Max (<a href="https://codepen.io/cpury">@cpury</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+
+				<section>
+					<p>Can we make the animation smoother?</p>
+					<br>
+					<p class="monospace fragment" style="font-size: 80%;">animation: bounce 1s <u>ease-in-out</u> infinite;</p>
+					<div class="double ball-container">
+						<div class="bouncing ball" style="background-color: lightblue; left: -80px; animation-timing-function: initial;">Without</div>
+						<div class="bouncing ball" style="left: 80px;">With</div>
+					</div>
+				</section>
+
+				<section>
+					<p class="monospace">Timing Function</p>
+					<br>
+					<table class="swiper-table">
+						<tr>
+							<td>
+								<div class="swiper" style="animation-timing-function: linear;"></div>
+							</td>
+							<td class="monospace">
+								linear
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease;"></div>
+							</td>
+							<td class="monospace">
+								ease
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease-in;"></div>
+							</td>
+							<td class="monospace">
+								ease-in
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease-out;"></div>
+							</td>
+							<td class="monospace">
+								ease-out
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>
+								<div class="swiper" style="animation-timing-function: ease-in-out;"></div>
+							</td>
+							<td class="monospace">
+								ease-in-out
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<p class="question">Do you remember how to rotate an element?</p>
+					<br>
+					<p class="monospace fragment answer" style="font-size: 80%;">transform: rotate(45deg);</p>
+				</section>
+
+				<section>
+					<p class="question">Can you animate the rotation?</p>
+					<br><br><br><br>
+					<div class="fragment">
+						<img class="cat" src="http://makeameme.org/media/templates/120/grumpy_cat.jpg">
+						<p class="answer" style="font-size: 80%;">Yes! Try it out!</p>
+					</div>
+				</section>
+
+				<section>
+					<p>My solution:</p>
+					<pre>
+						<code class="css" style="font-size: 20px; line-height: 1em;" data-trim>
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.cat {
+	animation: spin 2s linear infinite;
+}
+						</code>
+					</pre>
+					<p class="fragment" style="font-size: 80%;">Why is the <u class="monospace">linear</u> setting important?</p>
+				</section>
+
+				<section>
+					<h4>
+						Quick detour:
+					</h4>
+					<h2>
+						CSS Shorthands
+					</h2>
+				</section>
+
+				<section>
+					<h4>
+						Shorthand properties
+					</h4>
+					<br>
+					<ul style="font-size: 80%;">
+						<li class="fragment">Allow combining multiple properties into one</li>
+						<li class="fragment">Just to make life easier for you</li>
+						<li class="fragment">
+							Examples:<br>
+							<span class="monospace">margin, padding, animation, background, ...</span>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<span class="monospace" style="color: lightyellow; font-size: 80%;">padding: 10px;</span>
+					<h1 class="fragment equals">=</h1>
+					<span class="monospace fragment" style="color: lightyellow; font-size: 80%;">
+						padding-top: 10px;<br>
+						padding-right: 10px;<br>
+						padding-bottom: 10px;<br>
+						padding-left: 10px;<br>
+					</span>
+				</section>
+
+				<section>
+					<span class="monospace" style="color: lightyellow; font-size: 80%;">padding: 20px 40px;</span>
+					<h1 class="fragment equals">=</h1>
+					<span class="monospace fragment" style="color: lightyellow; font-size: 80%;">
+						padding-top: 20px;<br>
+						padding-right: 40px;<br>
+						padding-bottom: 20px;<br>
+						padding-left: 40px;<br>
+					</span>
+				</section>
+
+				<section>
+					<span class="monospace" style="color: lightyellow; font-size: 80%;">padding: 10px 20px 30px 40px;</span>
+					<h1 class="fragment equals">=</h1>
+					<span class="monospace fragment" style="color: lightyellow; font-size: 80%;">
+						padding-top: 10px;<br>
+						padding-right: 20px;<br>
+						padding-bottom: 30px;<br>
+						padding-left: 40px;<br>
+					</span>
+				</section>
+
+				<section>
+					<p><span class="monospace">margin</span> works exactly the same</p>
+					<br>
+					<p class="fragment">
+						Others are more complicated.<br>
+						For example <span class="monospace">animation</span>.
+					</p>
+				</section>
+
+				<section>
+					<p>Actually, CSS has many properties for animations:</p>
+					<br>
+					<ul style="font-size: 80%;">
+						<li class="fragment">
+							<span class="monospace">animation-name</span>
+						</li>
+						<li class="fragment">
+							<span class="monospace">animation-duration</span>
+						</li>
+						<li class="fragment">
+							<span class="monospace">animation-delay</span>
+						</li>
+						<li class="fragment">
+							etc. etc.
+						</li>
+					</ul>
+					<br>
+					<p class="fragment">
+						<span class="monospace">animation</span> is just a combination of them all!
+					</p>
+				</section>
+
+				<section>
+					<p>
+						Can you translate these propeties to one big <span class="monospace">animation</span> property?
+					</p>
+					<p class="monospace question fragment" style="font-size: 70%">
+						animation-direction: alternate;<br>
+						animation-timing-function: linear;<br>
+						animation-iteration-count: 2;<br>
+						animation-delay: 1s;<br>
+						animation-name: dance;<br>
+						animation-duration: 0.5s;<br>
+					</p>
+					<p class="monospace answer fragment" style="font-size: 70%">
+						&#8594; animation: dance 0.5s 1s linear alternate 2;
+					</p>
+				</section>
+
+				<section>
+					<p>
+						Don't worry!<br><br>
+						You can always look stuff up when you need it.
+					</p>
+				</section>
+
+				<section>
+					<h4>
+						A different kind of animation:
+					</h4>
+					<h2>
+						:hover
+					</h2>
+				</section>
+
+				<section>
+					<style>
+						.hoverbox {
+							width: 100px;
+							height: 100px;
+							background-color: green;
+							margin: 1em auto !important;
+						}
+						.hoverbox:hover {
+							background-color: red;
+							width: 200px;
+						}
+					</style>
+					<div class="hoverbox"></div>
+					<p class="monospace">
+						<pre style="font-size: 0.6em;">
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
+
+.box:hover {
+	width: 200px;
+	background-color: red;
+}
+</pre>
+					</p>
+					<p class="fragment">
+						Try some other :hover effects!
+					</p>
+				</section>
+
+				<section>
+					<style>
+						.hoverbox.animated {
+							transition: all 1s;
+						}
+					</style>
+					<div class="hoverbox animated"></div>
+					<p class="monospace">
+						<pre style="font-size: 0.6em;">
+.box {
+	...
+	transition: all 1s;
+}
+</pre>
+					</p>
+				</section>
+
+				<section>
+					<style>
+						.coolbox {
+							transition: all 1s;
+							width: 200px;
+							height: 200px;
+							background-color: green;
+							margin: 1em auto !important;
+							font-size: 200% !important;
+						}
+						.coolbox:hover {
+							border-radius: 50%;
+							transform: scale(1.25, 1.25) rotate(180deg);
+							background-color: lightblue;
+							border: lightgreen solid 20px;
+						}
+					</style>
+					<div class="coolbox">?</div>
+					<br>
+					<p>Get creative!</p>
+				</section>
+			</div>
+		</div>
+
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+				],
+			});
+		</script>
+	</body>
+</html>
