@@ -1,0 +1,217 @@
+<html>
+	<head>
+		<title>ReDI HTML/CSS 16</title>
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
+		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+		<style>
+			body {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased !important;
+				-moz-font-smoothing: antialiased !important;
+				text-rendering: optimizelegibility !important;
+			}
+
+			.reveal pre {
+				margin: 0;
+				line-height: 1.05em;
+				width: 100%;
+				box-shadow: none;
+			}
+			.monospace {
+				font-family: monospace !important;
+			}
+			.question {
+				color: lightyellow;
+			}
+
+			.answer {
+				color: lightgreen;
+			}
+
+			.reveal h1.equals {
+				font-size: 4em;
+				margin-top: -10px;
+				margin-bottom: -20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Website Structure</h1>
+					<h3>ReDI HTML+CSS</h3>
+				</section>
+
+				<section>
+					<p class="question">
+						Which two parts do CSS animations consist of?<br>
+						<span class="fragment answer">&#8594; @keyframes and animation-property</span>
+					</p>
+					<p class="fragment question">
+						What can go into a keyframe definition?<br>
+						<span class="fragment answer">&#8594; Any CSS style</span>
+					</p>
+					<p class="fragment question">
+						How to make a div twice as large, no matter what shape it has?<br>
+						<span class="fragment monospace answer">&#8594; transform: scale(2, 2);</span>
+					</p>
+					<p class="fragment question">
+						How do you set margin-left, -top, -right, -bottom at once?<br>
+						<span class="fragment answer monospace">&#8594; margin: 10px;</span>
+					</p>
+				</section>
+
+				<section>
+					<p class="question">
+						How do you change the style when an element is touched by the mouse<br>
+						<span class="fragment monospace answer">&#8594; .my_class:hover { ... }</span>
+					</p>
+					<p class="fragment question">
+						How do you animate the :hover state?<br>
+						<span class="fragment monospace answer">&#8594; transition: all 1s;</span>
+					</p>
+				</section>
+
+				<section>
+					<h1>
+						Let's revisit hyperlinks!
+					</h1>
+				</section>
+
+				<section>
+					<p class="question">
+						What are hyperlinks?<br>
+						<span class="fragment answer">A link to another .html page</span>
+					</p>
+					<p class="fragment question">
+						How do you add a hyperlink?<br>
+						<span class="fragment monospace answer">&lt;a href="..."&gt;...&lt;/a&gt;</span>
+					</p>
+					<p class="fragment">
+						Example:<br>
+						<pre>
+							<code class="html fragment" data-trim>
+Click &lt;a href="about-us.html"&gt;here&lt;/a&gt; to learn more about us!
+							</code>
+						</pre>
+						<span class="fragment">
+							Click <a href="about-us.html">here</a> to learn more about us!
+						</span>
+					</p>
+				</section>
+
+				<section>
+					<p>
+						What can go into a href?
+					</p>
+					<ul>
+						<li class="fragment">
+							<b>A complete URL</b>: <a>http://www.google.com</a>
+						</li>
+						<li class="fragment">
+							<b>Absolute path</b>: <a>/2018/04/08/blogpost.html</a>
+						</li>
+						<li class="fragment">
+							<b>Relative path</b>: <a>about-us/contact.html</a>
+						</li>
+						<li class="fragment">
+							<b>Section</b>: <a>#contact</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>
+						Have a look at the example files
+					</p>
+					<p class="fragment">
+						Build a simple website like this!
+					</p>
+					<p class="fragment">
+						Can you add links to the different <u>sections</u>?
+					</p>
+					<p class="fragment">
+						Can you add a <u>relative</u> link to the contact page?
+					</p>
+					<p class="fragment">
+						Can you add a link to an <u>external</u> Youtube video page?
+					</p>
+				</section>
+
+				<section>
+					<p>
+						Why are links <span style="text-decoration:underline;color:blue;">blue</span>? Why do they turn <span style="text-decoration:underline;color:purple;">purple</span>?
+					</p>
+					<p class="fragment">
+						The <span class="monospace">a</span>-tag uses a lot of pseudo-classes:
+					</p>
+					<p class="fragment">
+						<span class="monospace">a:hover</span> when being hovered
+					</p>
+					<p class="fragment">
+						<span class="monospace">a:active</span> when being clicked
+					</p>
+					<p class="fragment">
+						<span class="monospace">a:visited</span> when it has been visited
+					</p>
+				</section>
+
+				<section>
+					<p>
+						By default, a website opens in the current browser window/tab.
+					</p>
+					<p class="fragment">
+						You can force the browser to open it in a new tab, like
+						<a href="http://www.google.com" target="_blank">this</a>
+					</p>
+					<p class="monospace fragment">
+						&lt;a href="..." target="_blank"&gt;...&lt;/a&gt;
+					</p>
+				</section>
+
+				<section>
+					<h3>
+						Directory Structure
+					</h3>
+					<p class="fragment">
+						A website is like a directory on your computer:<br>
+						it can have many files and subdirectories.
+					</p>
+					<p class="fragment">
+						In a URL, you can access files in a subdirectory with the
+						<span class="monospace">/</span>
+					</p>
+					<p class="fragment">
+						Example:<br>
+						<span class="monospace" style="font-size: 70%">my-website.com/my-subdirectory/my-file.html</span>
+					</p>
+				</section>
+
+				<section>
+					<p>
+						Many HTML pages can share one CSS file.
+					</p>
+				</section>
+
+				<!-- TODO:
+				- How a page looks on a webserver
+				- Upload an example, maybe?
+				- Let them each build a little website -->
+			</div>
+		</div>
+
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+				],
+			});
+		</script>
+	</body>
+</html>
