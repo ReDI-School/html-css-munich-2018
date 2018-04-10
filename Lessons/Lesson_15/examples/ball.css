@@ -1,0 +1,17 @@
+@keyframes jump {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  animation: jump 1s infinite linear;
+  text-align: center;
+}
