@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>ReDI HTML/CSS 17</title>
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
+		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+		<style>
+			body {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased !important;
+				-moz-font-smoothing: antialiased !important;
+				text-rendering: optimizelegibility !important;
+			}
+
+			.reveal pre {
+				margin: 0;
+				line-height: 1.05em;
+				width: 100%;
+				box-shadow: none;
+			}
+			.monospace {
+				font-family: monospace !important;
+			}
+			.question {
+				color: lightyellow;
+			}
+
+			.answer {
+				color: lightgreen;
+			}
+
+			.reveal h1.equals {
+				font-size: 4em;
+				margin-top: -10px;
+				margin-bottom: -20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Website Structure</h1>
+					<h2>Part Two</h2>
+					<br>
+					<h3>ReDI HTML+CSS</h3>
+				</section>
+
+				<section>
+					<p class="question">
+						How do you create a hyperlink?<br>
+						<span class="fragment answer">&lt;a href="..."&gt;...&lt;/a&gt;</span>
+					</p>
+					<p class="fragment question">
+						What goes between inside the a-tag?<br>
+						<span class="fragment answer">The HTML that should be clickable, e.g. text or image</span>
+					</p>
+					<p class="fragment question">
+						What goes into the href attribute?<br>
+						<span class="fragment answer">The URL you want to link to.</span>
+					</p>
+				</section>
+
+				<section>
+					<p class="question">
+						How do you link to "page.html" which is in the folder "pages"?<br>
+						<span class="fragment answer monospace">pages/page.html</span>
+					</p>
+					<p class="fragment question">
+						How do you create a link out of an image?<br>
+						<span class="fragment answer">Put the img-tag inside the a-tag!</span>
+					</p>
+					<p class="fragment question">
+						What does the CSS selector "a:hover" do?<br>
+						<span class="fragment answer">Style a link while the mouse is hovering it</span>
+					</p>
+					<p class="fragment question">
+						How do you set the style of a link while it is clicked?<br>
+						<span class="fragment monospace answer">a:active { ... }</span>
+					</p>
+				</section>
+			</div>
+		</div>
+
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+				],
+			});
+		</script>
+	</body>
+</html>

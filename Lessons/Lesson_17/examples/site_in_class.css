@@ -1,0 +1,22 @@
+.container {
+  font-size: 32px;
+  width: 700px;
+  margin: 200px auto;
+}
+
+.container img {
+  width: 100%;
+  box-shadow: 0px 0px 10px black;
+}
+
+a {
+  color: darkorange;
+}
+
+a:hover {
+  color: darkred;
+}
+
+a:active {
+  color: black;
+}
