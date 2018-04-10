@@ -1,100 +1,202 @@
 <html>
-	<head>
-		<title>ReDI HTML/CSS 17</title>
-		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
-		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
-		<style>
-			body {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased !important;
-				-moz-font-smoothing: antialiased !important;
-				text-rendering: optimizelegibility !important;
-			}
+<head>
+	<title>ReDI HTML/CSS 17</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<style>
+	body {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased !important;
+		-moz-font-smoothing: antialiased !important;
+		text-rendering: optimizelegibility !important;
+	}
 
-			.reveal pre {
-				margin: 0;
-				line-height: 1.05em;
-				width: 100%;
-				box-shadow: none;
-			}
-			.monospace {
-				font-family: monospace !important;
-			}
-			.question {
-				color: lightyellow;
-			}
+	.reveal pre {
+		margin: 0;
+		line-height: 1.05em;
+		width: 100%;
+		box-shadow: none;
+	}
+	.monospace {
+		font-family: monospace !important;
+	}
+	.question {
+		color: lightyellow;
+	}
 
-			.answer {
-				color: lightgreen;
-			}
+	.answer {
+		color: lightgreen;
+	}
 
-			.reveal h1.equals {
-				font-size: 4em;
-				margin-top: -10px;
-				margin-bottom: -20px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Website Structure</h1>
-					<h2>Part Two</h2>
-					<br>
-					<h3>ReDI HTML+CSS</h3>
-				</section>
+	.reveal h1.equals {
+		font-size: 4em;
+		margin-top: -10px;
+		margin-bottom: -20px;
+	}
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Website Structure</h1>
+				<h2>Part Two</h2>
+				<br>
+				<h3>ReDI HTML+CSS</h3>
+			</section>
 
-				<section>
-					<p class="question">
-						How do you create a hyperlink?<br>
-						<span class="fragment answer">&lt;a href="..."&gt;...&lt;/a&gt;</span>
-					</p>
-					<p class="fragment question">
-						What goes between inside the a-tag?<br>
-						<span class="fragment answer">The HTML that should be clickable, e.g. text or image</span>
-					</p>
-					<p class="fragment question">
-						What goes into the href attribute?<br>
-						<span class="fragment answer">The URL you want to link to.</span>
-					</p>
-				</section>
+			<section>
+				<p class="question">
+					How do you create a hyperlink?<br>
+					<span class="fragment answer">&lt;a href="..."&gt;...&lt;/a&gt;</span>
+				</p>
+				<p class="fragment question">
+					What goes between inside the a-tag?<br>
+					<span class="fragment answer">The HTML that should be clickable, e.g. text or image</span>
+				</p>
+				<p class="fragment question">
+					What goes into the href attribute?<br>
+					<span class="fragment answer">The URL you want to link to.</span>
+				</p>
+			</section>
 
-				<section>
-					<p class="question">
-						How do you link to "page.html" which is in the folder "pages"?<br>
-						<span class="fragment answer monospace">pages/page.html</span>
-					</p>
-					<p class="fragment question">
-						How do you create a link out of an image?<br>
-						<span class="fragment answer">Put the img-tag inside the a-tag!</span>
-					</p>
-				</section>
+			<section>
+				<p class="question">
+					How do you link to "page.html" which is in the folder "pages"?<br>
+					<span class="fragment answer monospace">pages/page.html</span>
+				</p>
+				<p class="fragment question">
+					How do you create a link out of an image?<br>
+					<span class="fragment answer">Put the img-tag inside the a-tag!</span>
+				</p>
+			</section>
 
-				<section>
-					<p class="fragment question">
-						What does the CSS selector "a:hover" do?<br>
-						<span class="fragment answer">Style a link while the mouse is hovering it</span>
-					</p>
-					<p class="fragment question">
-						How do you set the style of a link while it is clicked?<br>
-						<span class="fragment monospace answer">a:active { ... }</span>
-					</p>
-				</section>
-			</div>
+			<section>
+				<p class="question">
+					What does the CSS selector "a:hover" do?<br>
+					<span class="fragment answer">Style a link while the mouse is hovering it</span>
+				</p>
+				<p class="fragment question">
+					How do you set the style of a link while it is clicked?<br>
+					<span class="fragment monospace answer">a:active { ... }</span>
+				</p>
+			</section>
+			<section>
+				What is 'float'? Think about print design like newspaper or magazine.
+			</section>
+			<section>
+				In a print layout, text wraps around image as needed. This is called
+				"text wrap".
+				<img src="img/printlayout.png">
+			</section>
+			<section>
+				Magazine design - honor or ignore the image!<br> Go over or not!<br>
+				Thats the different between images that
+				belong to the <b>float</b> or not. <br> Web design is similar
+				<img src="img/weblayout.png">
+			</section>
+			<section>
+				CSS float means if text float around them or not.<br>
+				Float elements = part of the float of the page
+			</section>
+			<section>
+				What's the opposite of float?<br>
+				<span class="fragment answer">Absolute</span>
+			</section>
+			<section>
+				Absolute elements are <b>removed</b> from the float
+				Absolute elements do not affect other elements in the page
+			</section>
+			<section>
+				Example of a float
+				<pre>
+					<code class="css fragment" data-trim>
+						.sidebar{
+							float:right
+						}
+					</code>
+				</pre>
+				<pre>
+					<code class="css fragment" data-trim>
+						.sidebar{
+							float:left
+						}
+					</code>
+				</pre>
+			</section>
+			<section>
+				What are <b>floats</b> used for?<br>
+				<span class="fragment answer">Other than text wrap around image</span><br>
+				<span class="fragment answer">You can use it to style <b>entire website</b></span>
+			</section>
+			<section>
+				<img src="img/webfloatex.png">
+			</section>
+			<section>
+				Also useful for smaller layout. For example: we can float our avatar image.
+				When the image is resized, text floats around it.
+				<img src="img/smallfloatex.png">
+			</section>
+			<section>
+				Using relative position on the container and absolute position on the avatar<br>
+				<span class="fragment answer"><img src="img/absoluteex.png">argh! no text wrap</span><br>
+			</section>
+			<section>
+				When do we clear the float?
+			</section>
+			<section>
+				<img src="img/noclearfloat.png">
+				 The sidebar is floated to the right but it is too short.
+				 Footer got pushed up!
+			</section>
+			<section>
+				<img src="img/clearfloat.png" style="width:50%"><br>
+				<span class="fragment">
+					To fix this problem, the footer can be cleared to ensure it stays beneath both floated columns.
+				</span>
+				<pre>
+					<code class="css fragment" data-trim>
+						#footer {
+							clear: both;
+						}
+					</code>
+				</pre>
+			</section>
+			<section>
+				Let´s try it out<br>
+				<img height="85%"src="img/porfolio.png">
+			</section>
+			<section>
+			Brain storm the rows and column and design the class we need<br>
+				<img height="85%"src="img/porfolio.png">
+			</section>
+			<section>
+			 Challenge !!!!! Resposive design. Hint: Different sizes<br>
+				<img height="85%"src="img/porfoliores1.png">
+				<img height="85%"src="img/porfoliores2.png">
+			</section>
+
+			<section>
+			 Challenge x 2 !!!!! Add overlay and hover<br>
+				<img height="85%"src="img/porfoliohover.png">
+			</section>
+
+
+
+
+
 		</div>
-
-
-		<script src="../../reveal.js/lib/js/head.min.js"></script>
-		<script src="../../reveal.js/js/reveal.js"></script>
-		<script>
-			Reveal.initialize({
-				history: true,
-				dependencies: [
-					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
-				],
-			});
-		</script>
-	</body>
+	</div>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+			],
+		});
+	</script>
+</body>
 </html>
