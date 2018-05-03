@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: lightgrey;
+    padding: 20px;
+    font-family: Arial;
+
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  background-color: white
+}
+
+img {
+  width: 100%;
+}
+
+.bigpic {
+  padding: 10px;
+  clear:both;
+  background-color: white;
+}
